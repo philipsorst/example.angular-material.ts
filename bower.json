@@ -1,0 +1,10 @@
+{
+    "name": "angular-material-example",
+    "version": "0.1.0",
+    "directory": "lib",
+    "ignore": [],
+    "dependencies": {
+        "angular-material": "0.6.*"
+    },
+    "devDependencies": {}
+}
