@@ -1,8 +1,17 @@
 {
     "name": "angular-material-example",
-    "version": "0.1.0",
-    "directory": "lib",
-    "ignore": [],
+    "license": "Apache-2.0",
+    "private": true,
+    "authors": [
+        {
+            "name": "Philip Washington Sorst",
+            "email": "philip@sorst.net"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/philipsorst/angular-material-example.js.git"
+    },
     "dependencies": {
         "angular-material": "0.6.*"
     },

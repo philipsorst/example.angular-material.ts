@@ -1,3 +1,5 @@
-app.controller('IndexController', function($scope) {
+var angularMaterialExampleControllers = angular.module('AngularMaterialExampleControllers', []);
+
+angularMaterialExampleControllers.controller('IndexController', function ($scope) {
 
 });
