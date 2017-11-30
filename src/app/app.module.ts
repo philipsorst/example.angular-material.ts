@@ -15,11 +15,13 @@ import {
 } from "@angular/material";
 import {AppTitleService} from "./app-title.service";
 import {TypographyComponent} from "../typography/typography.component";
+import {ListComponent} from "../list/list.component";
 
 @NgModule({
     declarations: [
         AppComponent,
-        TypographyComponent
+        TypographyComponent,
+        ListComponent
     ],
     imports: [
         BrowserModule,
