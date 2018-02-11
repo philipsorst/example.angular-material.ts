@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
-import {AppTitleService} from "../app/app-title.service";
 import * as faker from 'faker';
+import {Title} from "@angular/platform-browser";
 
 @Component({
     templateUrl: './list.component.html'
@@ -9,13 +9,13 @@ export class ListComponent implements OnInit
 {
     public userNames: string[] = [];
 
-    constructor(private appTitleService: AppTitleService)
+    constructor(private titleService: Title)
     {
     }
 
     public ngOnInit(): void
     {
-        this.appTitleService.setTitle('List');
+        this.titleService.setTitle('List');
         for (let i = 0; i < 50; i++) {
             this.userNames.push(faker.name.findName());
         }

@@ -1,28 +1,29 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AppTitleService} from "./app-title.service";
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Subscription} from "rxjs/Subscription";
+import {MatSidenav} from "@angular/material";
+import {SidenavService} from "../sidenav/sidenav.service";
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit, OnDestroy
+export class AppComponent implements OnInit
 {
     public title: string;
 
+    @ViewChild('sidenav') public sidenav: MatSidenav;
+
     private titleSubscription: Subscription;
 
-    constructor(private appTitleService: AppTitleService)
+    constructor(private sidenavService: SidenavService)
     {
     }
 
+    /**
+     * @override
+     */
     public ngOnInit(): void
     {
-        this.titleSubscription = this.appTitleService.getTitleSubject().subscribe((newTitle) => this.title = newTitle);
-    }
-
-    public ngOnDestroy(): void
-    {
-        this.titleSubscription.unsubscribe();
+        this.sidenavService.setSidenav(this.sidenav);
     }
 }

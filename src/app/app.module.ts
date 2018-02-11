@@ -13,15 +13,17 @@ import {
     MatSidenavModule,
     MatToolbarModule
 } from "@angular/material";
-import {AppTitleService} from "./app-title.service";
 import {TypographyComponent} from "../typography/typography.component";
 import {ListComponent} from "../list/list.component";
+import {SidenavService} from "../sidenav/sidenav.service";
+import {SidenavToggleComponent} from "../sidenav/sidenav-toggle.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         TypographyComponent,
-        ListComponent
+        ListComponent,
+        SidenavToggleComponent
     ],
     imports: [
         BrowserModule,
@@ -35,7 +37,7 @@ import {ListComponent} from "../list/list.component";
         MatCardModule
     ],
     providers: [
-        AppTitleService
+        SidenavService
     ],
     bootstrap: [AppComponent]
 })

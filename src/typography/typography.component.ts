@@ -1,17 +1,17 @@
 import {Component, OnInit} from "@angular/core";
-import {AppTitleService} from "../app/app-title.service";
+import {Title} from "@angular/platform-browser";
 
 @Component({
     templateUrl: './typography.component.html'
 })
 export class TypographyComponent implements OnInit
 {
-    constructor(private appTitleService: AppTitleService)
+    constructor(private titleService: Title)
     {
     }
 
     public ngOnInit(): void
     {
-        this.appTitleService.setTitle('Typography');
+        this.titleService.setTitle('Typography');
     }
 }
