@@ -6,10 +6,12 @@ html, body {
 }
 
 .mat-sidenav-content {
+
     min-height: 100vh;
     padding-top: 64px;
 
     .mat-toolbar {
+
         position: fixed;
         top: 0;
         z-index: 1;
@@ -22,4 +24,8 @@ html, body {
 
 .mat-card-standalone {
     margin: 24px;
+}
+
+sidenav-toggle {
+    margin-right: 16px;
 }
