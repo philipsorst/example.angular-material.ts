@@ -29,3 +29,14 @@ html, body {
 sidenav-toggle {
     margin-right: 16px;
 }
+
+.fab-container {
+
+    height: 56px + 16px + 16px;
+
+    .mat-fab {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+    }
+}

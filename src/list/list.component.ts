@@ -19,16 +19,10 @@ export class ListComponent implements OnInit
     public ngOnInit(): void
     {
         this.titleService.setTitle('List');
-        let users = [];
         for (let i = 0; i < 50; i++) {
-            users.push(this.createUser());
+            this.add(false);
         }
-
-        users.sort((user1: User, user2: User) => {
-            return user1.username.localeCompare(user2.username);
-        });
-
-        this.users = users;
+        this.sort();
     }
 
     public trackByUuid(user: User)
@@ -36,12 +30,12 @@ export class ListComponent implements OnInit
         return user.id;
     }
 
-    public add()
+    public add(sort: boolean = true)
     {
         this.users.push(this.createUser());
-        this.users.sort((user1: User, user2: User) => {
-            return user1.username.localeCompare(user2.username);
-        });
+        if (sort) {
+            this.sort()
+        }
     }
 
     public remove(user: User)
@@ -55,16 +49,27 @@ export class ListComponent implements OnInit
     {
         let user = new User();
         user.id = faker.random.uuid();
-        user.username = faker.name.findName();
+        user.firstName = faker.name.firstName();
+        user.lastName = faker.name.lastName();
+        user.userName = faker.internet.userName();
         user.avatarUrl = faker.image.avatar();
 
         return user;
+    }
+
+    private sort()
+    {
+        this.users.sort((user1: User, user2: User) => {
+            return user1.userName.localeCompare(user2.userName);
+        });
     }
 }
 
 export class User
 {
     public id: string;
-    public username: string;
+    public firstName: string;
+    public lastName: string;
+    public userName: string;
     public avatarUrl: string;
 }
