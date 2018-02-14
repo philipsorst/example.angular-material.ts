@@ -6,8 +6,11 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {
+    MatAutocompleteModule,
     MatButtonModule,
     MatCardModule,
+    MatChipsModule,
+    MatFormFieldModule,
     MatIconModule,
     MatListModule,
     MatSidenavModule,
@@ -19,6 +22,8 @@ import {SidenavService} from "../sidenav/sidenav.service";
 import {SidenavToggleComponent} from "../sidenav/sidenav-toggle.component";
 import {TitleService} from "../title/title.service";
 import {TitleComponent} from "../title/title.component";
+import {ChipComponent} from "../chip/chip.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -26,18 +31,24 @@ import {TitleComponent} from "../title/title.component";
         TypographyComponent,
         ListComponent,
         SidenavToggleComponent,
-        TitleComponent
+        TitleComponent,
+        ChipComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
         AppRoutingModule,
         MatSidenavModule,
         MatIconModule,
         MatListModule,
         MatToolbarModule,
         MatButtonModule,
-        MatCardModule
+        MatCardModule,
+        MatAutocompleteModule,
+        MatChipsModule,
+        MatFormFieldModule
     ],
     providers: [
         SidenavService,
