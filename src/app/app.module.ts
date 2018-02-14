@@ -17,13 +17,16 @@ import {TypographyComponent} from "../typography/typography.component";
 import {ListComponent} from "../list/list.component";
 import {SidenavService} from "../sidenav/sidenav.service";
 import {SidenavToggleComponent} from "../sidenav/sidenav-toggle.component";
+import {TitleService} from "../title/title.service";
+import {TitleComponent} from "../title/title.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         TypographyComponent,
         ListComponent,
-        SidenavToggleComponent
+        SidenavToggleComponent,
+        TitleComponent
     ],
     imports: [
         BrowserModule,
@@ -37,7 +40,8 @@ import {SidenavToggleComponent} from "../sidenav/sidenav-toggle.component";
         MatCardModule
     ],
     providers: [
-        SidenavService
+        SidenavService,
+        TitleService
     ],
     bootstrap: [AppComponent]
 })

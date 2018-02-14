@@ -15,18 +15,18 @@ html, body {
         position: fixed;
         top: 0;
         z-index: 1;
-
-        .spacer {
-            flex: 1 1 auto;
-        }
     }
+}
+
+ex-title {
+    flex: 1 1 auto;
 }
 
 .mat-card-standalone {
     margin: 24px;
 }
 
-sidenav-toggle {
+ex-sidenav-toggle {
     margin-right: 16px;
 }
 

@@ -1,12 +1,12 @@
 import {Component, OnInit} from "@angular/core";
-import {Title} from "@angular/platform-browser";
+import {TitleService} from "../title/title.service";
 
 @Component({
     templateUrl: './typography.component.html'
 })
 export class TypographyComponent implements OnInit
 {
-    constructor(private titleService: Title)
+    constructor(private titleService: TitleService)
     {
     }
 

@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import * as faker from 'faker';
-import {Title} from "@angular/platform-browser";
+import {TitleService} from "../title/title.service";
 
 @Component({
     templateUrl: './list.component.html'
@@ -9,7 +9,7 @@ export class ListComponent implements OnInit
 {
     public users: User[] = [];
 
-    constructor(private titleService: Title)
+    constructor(private titleService: TitleService)
     {
     }
 

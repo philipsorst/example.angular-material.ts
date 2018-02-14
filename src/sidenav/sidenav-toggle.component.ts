@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 import {SidenavService} from "./sidenav.service";
 
 @Component({
-    selector: 'sidenav-toggle',
+    selector: 'ex-sidenav-toggle',
     template: `
         <button mat-icon-button (click)="toggleSidenav()">
             <mat-icon>menu</mat-icon>
