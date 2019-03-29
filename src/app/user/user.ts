@@ -5,4 +5,5 @@ export class User
     public lastName: string;
     public userName: string;
     public avatarUrl: string;
+    public sortKey: number;
 }

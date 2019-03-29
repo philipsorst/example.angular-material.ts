@@ -3,19 +3,21 @@
     <ex-title></ex-title>
 </mat-toolbar>
 
-<mat-list>
-    <mat-list-item *ngFor="let user of users | async; trackBy: trackByUuid">
+<mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)">
+    <mat-list-item *ngFor="let user of users | async; trackBy: trackByUuid" cdkDrag>
         <img mat-list-avatar src="{{user.avatarUrl}}">
-        <h3 mat-line>{{user.firstName}} {{user.lastName}}</h3>
+        <a mat-line [routerLink]="['/navlist', user.id]">{{user.firstName}} {{user.lastName}}</a>
         <p mat-line>{{user.userName}}</p>
         <button mat-icon-button (click)="remove(user)">
             <mat-icon>delete</mat-icon>
         </button>
     </mat-list-item>
-</mat-list>
+</mat-nav-list>
 
 <div class="fab-container">
     <button mat-fab (click)="add()">
         <mat-icon>add</mat-icon>
     </button>
 </div>
+
+<router-outlet></router-outlet>

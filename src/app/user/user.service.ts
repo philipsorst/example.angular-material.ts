@@ -15,12 +15,12 @@ export class UserService
     constructor()
     {
         for (let i = 0; i < 50; i++) {
-            this.users.push(this.createUser());
+            this.users.push(this.createUser(i));
         }
         this.usersSubject.next(this.users);
     }
 
-    public createUser(): User
+    public createUser(sortKey: number = 0): User
     {
         let user = new User();
         user.id = faker.random.uuid();
@@ -28,6 +28,7 @@ export class UserService
         user.lastName = faker.name.lastName();
         user.userName = faker.internet.userName();
         user.avatarUrl = faker.image.avatar();
+        user.sortKey = sortKey;
 
         return user;
     }

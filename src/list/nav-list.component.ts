@@ -5,9 +5,9 @@ import {UserService} from '../app/user/user.service';
 import {Observable} from 'rxjs';
 
 @Component({
-    templateUrl: './list.component.html'
+    templateUrl: './nav-list.component.html'
 })
-export class ListComponent implements OnInit, OnDestroy
+export class NavListComponent implements OnInit, OnDestroy
 {
     public users: Observable<User[]>;
 
@@ -44,5 +44,10 @@ export class ListComponent implements OnInit, OnDestroy
     public remove(user: User)
     {
         this.userService.remove(user);
+    }
+
+    dropped($event)
+    {
+        console.log('dropped', $event)
     }
 }

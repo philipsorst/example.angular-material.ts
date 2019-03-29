@@ -17,7 +17,7 @@ import {
     MatToolbarModule
 } from "@angular/material";
 import {TypographyComponent} from "../typography/typography.component";
-import {ListComponent} from "../list/list.component";
+import {NavListComponent} from "../list/nav-list.component";
 import {SidenavService} from "../sidenav/sidenav.service";
 import {SidenavToggleComponent} from "../sidenav/sidenav-toggle.component";
 import {TitleService} from "../title/title.service";
@@ -25,6 +25,8 @@ import {TitleComponent} from "../title/title.component";
 import {ChipComponent} from "../chip/chip.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {InitService} from '../init/init.service';
+import {ListDetailComponent} from '../list/list-detail.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 export function initServiceFactory(initService: InitService): Function
 {
@@ -35,7 +37,8 @@ export function initServiceFactory(initService: InitService): Function
     declarations: [
         AppComponent,
         TypographyComponent,
-        ListComponent,
+        NavListComponent,
+        ListDetailComponent,
         SidenavToggleComponent,
         TitleComponent,
         ChipComponent
@@ -54,7 +57,8 @@ export function initServiceFactory(initService: InitService): Function
         MatCardModule,
         MatAutocompleteModule,
         MatChipsModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        DragDropModule
     ],
     providers: [
         SidenavService,
