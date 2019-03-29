@@ -6,10 +6,18 @@ html, body {
     margin: 0;
 }
 
+.mat-drawer-content {
+    padding-top: 64px;
+    height: calc(100vh - 64px) !important;
+    overflow: scroll;
+}
+
 .mat-sidenav-content {
 
-    min-height: 100vh;
-    padding-top: 64px;
+    //min-height: 100vh;
+    //padding-top: 64px;
+    //height: 100vh;
+
 
     .mat-toolbar {
 
