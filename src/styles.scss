@@ -1,3 +1,4 @@
+@import "~material-design-icons/iconfont/material-icons.css";
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 html, body {
@@ -43,4 +44,14 @@ ex-sidenav-toggle {
 
 .mat-form-field {
     width: 100%;
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-preview {
+    background-color: red;
+    display: block;
+    border: solid 1px #808080;
 }

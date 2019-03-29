@@ -4,7 +4,8 @@
 </mat-toolbar>
 
 <mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)">
-    <mat-list-item *ngFor="let user of users | async; trackBy: trackByUuid" cdkDrag>
+    <mat-list-item *ngFor="let user of users | async; trackBy: trackByUuid" cdkDrag cdkDragLockAxis="y">
+        <mat-icon cdkDragHandle>drag_handle</mat-icon>
         <img mat-list-avatar src="{{user.avatarUrl}}">
         <a mat-line [routerLink]="['/navlist', user.id]">{{user.firstName}} {{user.lastName}}</a>
         <p mat-line>{{user.userName}}</p>
