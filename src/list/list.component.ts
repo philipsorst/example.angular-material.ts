@@ -1,15 +1,17 @@
-import {Component, OnInit} from "@angular/core";
-import * as faker from 'faker';
+import {Component, OnDestroy, OnInit} from "@angular/core";
 import {TitleService} from "../title/title.service";
+import {User} from '../app/user/user';
+import {UserService} from '../app/user/user.service';
+import {Observable} from 'rxjs';
 
 @Component({
     templateUrl: './list.component.html'
 })
-export class ListComponent implements OnInit
+export class ListComponent implements OnInit, OnDestroy
 {
-    public users: User[] = [];
+    public users: Observable<User[]>;
 
-    constructor(private titleService: TitleService)
+    constructor(private titleService: TitleService, private userService: UserService)
     {
     }
 
@@ -19,10 +21,14 @@ export class ListComponent implements OnInit
     public ngOnInit(): void
     {
         this.titleService.setTitle('List');
-        for (let i = 0; i < 50; i++) {
-            this.add(false);
-        }
-        this.sort();
+        this.users = this.userService.getUsersObservable();
+    }
+
+    /**
+     * @override
+     */
+    public ngOnDestroy(): void
+    {
     }
 
     public trackByUuid(user: User)
@@ -30,46 +36,13 @@ export class ListComponent implements OnInit
         return user.id;
     }
 
-    public add(sort: boolean = true)
+    public add()
     {
-        this.users.push(this.createUser());
-        if (sort) {
-            this.sort()
-        }
+        this.userService.add(this.userService.createUser());
     }
 
     public remove(user: User)
     {
-        this.users = this.users.filter((listUser: User) => {
-            return listUser.id !== user.id;
-        });
+        this.userService.remove(user);
     }
-
-    private createUser(): User
-    {
-        let user = new User();
-        user.id = faker.random.uuid();
-        user.firstName = faker.name.firstName();
-        user.lastName = faker.name.lastName();
-        user.userName = faker.internet.userName();
-        user.avatarUrl = faker.image.avatar();
-
-        return user;
-    }
-
-    private sort()
-    {
-        this.users.sort((user1: User, user2: User) => {
-            return user1.userName.localeCompare(user2.userName);
-        });
-    }
-}
-
-export class User
-{
-    public id: string;
-    public firstName: string;
-    public lastName: string;
-    public userName: string;
-    public avatarUrl: string;
 }

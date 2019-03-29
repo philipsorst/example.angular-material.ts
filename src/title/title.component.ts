@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {TitleService} from "./title.service";
-import {Subscription} from "rxjs/Subscription";
+import {Subscription} from 'rxjs';
 
 @Component({
     selector: 'ex-title',
