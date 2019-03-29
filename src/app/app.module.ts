@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -24,6 +24,12 @@ import {TitleService} from "../title/title.service";
 import {TitleComponent} from "../title/title.component";
 import {ChipComponent} from "../chip/chip.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {InitService} from '../init/init.service';
+
+export function initServiceFactory(initService: InitService): Function
+{
+    return () => initService.initialize();
+}
 
 @NgModule({
     declarations: [
@@ -52,7 +58,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ],
     providers: [
         SidenavService,
-        TitleService
+        TitleService,
+        {
+            provide: APP_INITIALIZER,
+            useFactory: initServiceFactory,
+            deps: [InitService],
+            multi: true
+        },
     ],
     bootstrap: [AppComponent]
 })
