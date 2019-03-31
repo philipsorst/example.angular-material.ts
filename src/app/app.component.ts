@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatSidenav} from "@angular/material";
 import {SidenavService} from "../sidenav/sidenav.service";
 import {Subscription} from 'rxjs';
+import {RouterService} from './router.service';
 
 @Component({
     selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit
 
     private titleSubscription: Subscription;
 
-    constructor(private sidenavService: SidenavService)
+    constructor(private sidenavService: SidenavService, private routerService: RouterService)
     {
     }
 

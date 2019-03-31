@@ -10,8 +10,11 @@ const routes: Routes = [
     {path: 'typography', component: TypographyComponent},
     {
         path: 'navlist',
-        component: NavListComponent,
         children: [
+            {
+                'path': '',
+                component: NavListComponent
+            },
             {
                 path: ':uuid',
                 component: ListDetailComponent
@@ -22,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
     exports: [RouterModule]
 })
 export class AppRoutingModule

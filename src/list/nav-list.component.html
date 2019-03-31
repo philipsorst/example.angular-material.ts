@@ -1,28 +1,22 @@
-<div id="master" [ngStyle]="{display: detailActive? 'none' : 'block'}">
-    <mat-toolbar color="primary">
-        <ex-sidenav-toggle></ex-sidenav-toggle>
-        <ex-title></ex-title>
-    </mat-toolbar>
+<mat-toolbar color="primary">
+    <ex-sidenav-toggle></ex-sidenav-toggle>
+    <ex-title></ex-title>
+</mat-toolbar>
 
-    <mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)">
-        <mat-list-item *ngFor="let user of users | async; trackBy: trackByUuid" cdkDrag cdkDragLockAxis="y">
-            <mat-icon cdkDragHandle>drag_handle</mat-icon>
-            <img mat-list-avatar src="{{user.avatarUrl}}">
-            <a mat-line [routerLink]="['/navlist', user.id]">{{user.firstName}} {{user.lastName}}</a>
-            <p mat-line>{{user.userName}}</p>
-            <button mat-icon-button (click)="remove(user)">
-                <mat-icon>delete</mat-icon>
-            </button>
-        </mat-list-item>
-    </mat-nav-list>
-
-    <div class="fab-container">
-        <button mat-fab (click)="add()">
-            <mat-icon>add</mat-icon>
+<mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)">
+    <mat-list-item *ngFor="let user of users | async; trackBy: trackByUuid" cdkDrag cdkDragLockAxis="y">
+        <mat-icon cdkDragHandle>drag_handle</mat-icon>
+        <img mat-list-avatar src="{{user.avatarUrl}}">
+        <a mat-line [routerLink]="['/navlist', user.id]">{{user.firstName}} {{user.lastName}}</a>
+        <p mat-line>{{user.userName}}</p>
+        <button mat-icon-button (click)="remove(user)">
+            <mat-icon>delete</mat-icon>
         </button>
-    </div>
-</div>
+    </mat-list-item>
+</mat-nav-list>
 
-<div id="detail">
-    <router-outlet></router-outlet>
+<div class="fab-container">
+    <button mat-fab (click)="add()">
+        <mat-icon>add</mat-icon>
+    </button>
 </div>
