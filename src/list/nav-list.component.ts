@@ -4,6 +4,7 @@ import {User} from '../app/user/user';
 import {UserService} from '../app/user/user.service';
 import {Observable} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
+import {CdkDragDrop} from '@angular/cdk/drag-drop';
 
 @Component({
     templateUrl: './nav-list.component.html'
@@ -55,8 +56,9 @@ export class NavListComponent implements OnInit, OnDestroy
         this.userService.remove(user);
     }
 
-    dropped($event)
+    public dropped(event: CdkDragDrop<User>)
     {
-        console.log('dropped', $event)
+        console.log('dropped', event);
+        this.userService.move(event.previousIndex, event.currentIndex);
     }
 }

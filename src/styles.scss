@@ -7,7 +7,7 @@ html, body {
 }
 
 .mat-drawer-content {
-    //padding-top: 64px;
+    padding-top: 64px;
     //height: calc(100vh - 64px) !important;
     //overflow: scroll;
 }
@@ -59,7 +59,61 @@ ex-sidenav-toggle {
 }
 
 .cdk-drag-preview {
-    background-color: red;
+    background-color: #dedede;
     display: block;
     border: solid 1px #808080;
+
+    .mat-list-item-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0 16px;
+        position: relative;
+        height: inherit;
+    }
+
+    .mat-list-avatar {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .mat-icon {
+        display: none;
+    }
+
+    .mat-list-text > * {
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+    }
+
+    .mat-list-text {
+        padding: 0 0 0 16px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .mat-line {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .mat-line:nth-child(n+2) {
+        font-size: 14px;
+    }
 }
