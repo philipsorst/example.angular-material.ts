@@ -9,7 +9,7 @@ export class RouterService
     constructor(private router: Router)
     {
         this.router.events.subscribe((event: RouterEvent) => {
-            console.log('routerEvent', event);
+            // console.log('routerEvent', event);
         });
     }
 }
