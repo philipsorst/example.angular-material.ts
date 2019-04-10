@@ -4,6 +4,7 @@ import {TypographyComponent} from "../typography/typography.component";
 import {NavListComponent} from "../list/nav-list.component";
 import {ChipComponent} from "../chip/chip.component";
 import {ListDetailComponent} from '../list/list-detail.component';
+import {NotFoundComponent} from './common/not-found.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/typography', pathMatch: 'full'},
@@ -21,7 +22,14 @@ const routes: Routes = [
             }
         ]
     },
-    {path: 'chip', component: ChipComponent}
+    {
+        path: 'chip',
+        component: ChipComponent
+    },
+    {
+        path: '**',
+        component: NotFoundComponent
+    }
 ];
 
 @NgModule({

@@ -28,6 +28,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {InitService} from '../init/init.service';
 import {ListDetailComponent} from '../list/list-detail.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {NotFoundComponent} from './common/not-found.component';
 
 export function initServiceFactory(initService: InitService): Function
 {
@@ -42,7 +43,8 @@ export function initServiceFactory(initService: InitService): Function
         ListDetailComponent,
         SidenavToggleComponent,
         TitleComponent,
-        ChipComponent
+        ChipComponent,
+        NotFoundComponent
     ],
     imports: [
         BrowserModule,
