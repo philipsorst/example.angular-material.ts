@@ -13,6 +13,7 @@ import {
     MatFormFieldModule,
     MatIconModule,
     MatListModule,
+    MatMenuModule,
     MatSidenavModule,
     MatToolbarModule
 } from "@angular/material";
@@ -58,6 +59,7 @@ export function initServiceFactory(initService: InitService): Function
         MatAutocompleteModule,
         MatChipsModule,
         MatFormFieldModule,
+        MatMenuModule,
         DragDropModule
     ],
     providers: [

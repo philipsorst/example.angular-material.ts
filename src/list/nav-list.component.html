@@ -10,9 +10,12 @@
         <img mat-list-avatar src="{{user.avatarUrl}}">
         <a mat-line [routerLink]="['/navlist', user.id]">{{user.lastName}}, {{user.firstName}} </a>
         <p mat-line>Index: {{idx}}, SortKey: {{user.sortKey}}</p>
-        <button mat-icon-button (click)="remove(user)">
-            <mat-icon>delete</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="optionsMenu">
+            <mat-icon>more_vert</mat-icon>
         </button>
+        <mat-menu #optionsMenu="matMenu">
+            <button mat-menu-item (click)="remove(user)">Delete</button>
+        </mat-menu>
     </mat-list-item>
 </mat-nav-list>
 
