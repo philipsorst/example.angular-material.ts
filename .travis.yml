@@ -16,9 +16,10 @@ install:
     - npm install -g yarn
 
 script:
+    - yarn install
     - yarn lint
-    - yarn build --base-href /example.angular-material.ts/
-    - mv dist/index.html dist/404.html
+    - yarn build --base-href /example.angular-material.ts/ --prod --aot
+#    - mv dist/index.html dist/404.html
 
 deploy:
     provider: pages
