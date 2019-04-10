@@ -36,7 +36,7 @@ ex-title {
 }
 
 ex-sidenav-toggle {
-    margin-right: 16px;
+    margin-right: 1rem;
 }
 
 .fab-container {
@@ -50,8 +50,26 @@ ex-sidenav-toggle {
     }
 }
 
-.mat-form-field {
-    width: 100%;
+//////////
+// Flex //
+//////////
+
+.flex-container-row {
+    display: flex !important;
+    flex-direction: row;
+
+    > * {
+        flex: 1;
+    }
+}
+
+.flex-container-column {
+    display: flex !important;
+    flex-direction: column;
+
+    > * {
+        flex: 1;
+    }
 }
 
 .cdk-drag-placeholder {

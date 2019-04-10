@@ -3,20 +3,22 @@
     <ex-title></ex-title>
 </mat-toolbar>
 
-<mat-form-field>
-    <mat-chip-list #chipList>
-        <mat-chip *ngFor="let color of colors" selectable="true" removable="true" (remove)="removeColor(color)">
-            {{color}}
-            <mat-icon matChipRemove>cancel</mat-icon>
-        </mat-chip>
+<mat-card class="flex-container-row">
+    <mat-form-field>
+        <mat-chip-list #chipList>
+            <mat-chip *ngFor="let color of colors" selectable="true" removable="true" (remove)="removeColor(color)">
+                {{color}}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
 
-        <input placeholder="Pick some colors" [matChipInputFor]="chipList" [matAutocomplete]="autoComplete"
-               matChipInputAddOnBlur="false"
-               matInput [formControl]="formControl" #chipInput />
-    </mat-chip-list>
-    <mat-autocomplete #autoComplete="matAutocomplete" (optionSelected)="addColor($event.option.value, chipInput)">
-        <mat-option *ngFor="let filteredColor of filteredColors" [value]="filteredColor">
-            {{ filteredColor }}
-        </mat-option>
-    </mat-autocomplete>
-</mat-form-field>
+            <input placeholder="Pick some colors" [matChipInputFor]="chipList" [matAutocomplete]="autoComplete"
+                   matChipInputAddOnBlur="false"
+                   matInput [formControl]="formControl" #chipInput />
+        </mat-chip-list>
+        <mat-autocomplete #autoComplete="matAutocomplete" (optionSelected)="addColor($event.option.value, chipInput)">
+            <mat-option *ngFor="let filteredColor of filteredColors" [value]="filteredColor">
+                {{ filteredColor }}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</mat-card>
