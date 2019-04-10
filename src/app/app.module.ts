@@ -29,6 +29,8 @@ import {InitService} from '../init/init.service';
 import {ListDetailComponent} from '../list/list-detail.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {NotFoundComponent} from './common/not-found.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
 
 export function initServiceFactory(initService: InitService): Function
 {
@@ -62,7 +64,8 @@ export function initServiceFactory(initService: InitService): Function
         MatChipsModule,
         MatFormFieldModule,
         MatMenuModule,
-        DragDropModule
+        DragDropModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
     ],
     providers: [
         SidenavService,
