@@ -1,11 +1,10 @@
 {
-    "name": "angular-material-example",
+    "name": "Angular Material Example",
     "short_name": "angular-material-example",
-    "theme_color": "#1976d2",
+    "theme_color": "#3f51b5",
     "background_color": "#fafafa",
     "display": "standalone",
-    "scope": "/",
-    "start_url": "/",
+    "start_url": "/example.angular-material.ts/",
     "icons": [
         {
             "src": "assets/icons/icon-72x72.png",
