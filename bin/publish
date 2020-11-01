@@ -1,0 +1,4 @@
+#!/bin/bash
+ng build --prod --aot --base-href "https://philipsorst.github.io/example.angular-material.ts/" \
+&& yarn angular-cli-ghpages --dir=dist/
+
