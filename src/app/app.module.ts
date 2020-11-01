@@ -5,18 +5,16 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule
-} from "@angular/material";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
+import {MatChipsModule} from "@angular/material/chips";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatIconModule} from "@angular/material/icon";
+import {MatListModule} from "@angular/material/list";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatToolbarModule} from "@angular/material/toolbar";
 import {TypographyComponent} from "../typography/typography.component";
 import {NavListComponent} from "../list/nav-list.component";
 import {SidenavService} from "../sidenav/sidenav.service";

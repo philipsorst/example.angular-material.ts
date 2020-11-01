@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatSidenav} from "@angular/material";
+import {MatSidenav} from "@angular/material/sidenav";
 import {SidenavService} from "../sidenav/sidenav.service";
 import {Subscription} from 'rxjs';
 import {RouterService} from './router.service';
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit
 {
     public title: string;
 
-    @ViewChild('sidenav') public sidenav: MatSidenav;
+    @ViewChild('sidenav', {static: true}) public sidenav: MatSidenav;
 
     private titleSubscription: Subscription;
 
