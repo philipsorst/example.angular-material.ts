@@ -9,7 +9,8 @@
                    cdkDragLockAxis="y">
         <mat-icon cdkDragHandle>drag_handle</mat-icon>
         <img mat-list-avatar src="{{user.avatarUrl}}">
-        <a mat-line [routerLink]="['/navlist', user.id]">{{user.lastName}}, {{user.firstName}} </a>
+        <a mat-line [routerLink]="['/examples', 'drag-and-drop-list', user.id]">{{user.lastName}}
+            , {{user.firstName}} </a>
         <p mat-line>Index: {{idx}}, SortKey: {{user.sortKey}}</p>
         <button mat-icon-button [matMenuTriggerFor]="optionsMenu">
             <mat-icon>more_vert</mat-icon>

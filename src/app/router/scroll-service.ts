@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Router, Scroll} from '@angular/router';
 import {ViewportScroller} from '@angular/common';
-import {filter, tap} from 'rxjs/operators';
+import {filter} from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -14,13 +14,13 @@ export class ScrollService
     {
         this.router.events
             .pipe(
-                tap((e) => console.log('Event', e)),
+                // tap((e) => console.log('Event', e)),
                 filter(e => e instanceof Scroll)
             )
             .subscribe(e => {
                 if ((e as Scroll).position) {
                     this.lastScrollPosition = (e as Scroll).position;
-                    console.log('scrollPosition', e)
+                    // console.log('scrollPosition', e)
                 }
             });
     }

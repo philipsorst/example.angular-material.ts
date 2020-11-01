@@ -1,17 +1,21 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from "@angular/core";
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CdkDragDrop} from '@angular/cdk/drag-drop';
 import {TitleService} from '../../../title/title.service';
 import {User} from '../../user/user';
-import {UserService} from '../../user/user.service';
+import {MapBackedUserService} from '../../user/map-backed-user.service';
 import {ScrollService} from '../../router/scroll-service';
+import {UserGeneratorService} from '../../user/user-generator.service';
+import {switchMap} from 'rxjs/operators';
 
 @Component({
     templateUrl: './drag-and-drop-list.component.html'
 })
 export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewInit
 {
+    private refresh$ = new BehaviorSubject(Date.now());
+
     public users$: Observable<User[]>;
 
     public detailActive = false;
@@ -22,8 +26,9 @@ export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewIni
         private titleService: TitleService,
         private route: ActivatedRoute,
         private router: Router,
-        private userService: UserService,
-        private scrollService: ScrollService
+        private userService: MapBackedUserService,
+        private scrollService: ScrollService,
+        private userGeneratorService: UserGeneratorService
     )
     {
     }
@@ -33,8 +38,10 @@ export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewIni
      */
     public ngOnInit(): void
     {
-        this.titleService.setTitle('List');
-        this.users$ = this.userService.getUsersObservable();
+        this.titleService.setTitle('Drag and Drop List');
+        this.users$ = this.refresh$.pipe(
+            switchMap(() => this.userService.list())
+        );
     }
 
     /**
@@ -59,17 +66,20 @@ export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewIni
 
     public add()
     {
-        this.userService.add(this.userService.createUser());
+        this.userService.create(this.userGeneratorService.generate(true))
+            .subscribe({next: () => this.refresh$.next(Date.now())})
     }
 
     public remove(user: User)
     {
-        this.userService.remove(user);
+        this.userService.delete(user.id)
+            .subscribe({next: () => this.refresh$.next(Date.now())})
     }
 
     public dropped(event: CdkDragDrop<User>)
     {
         console.log('dropped', event);
-        this.userService.move(event.previousIndex, event.currentIndex);
+        this.userService.move(event.previousIndex, event.currentIndex)
+            .subscribe({next: () => this.refresh$.next(Date.now())})
     }
 }

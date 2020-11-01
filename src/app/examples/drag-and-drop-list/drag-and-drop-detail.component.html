@@ -2,3 +2,9 @@
     <ex-sidenav-toggle></ex-sidenav-toggle>
     <ex-title></ex-title>
 </mat-toolbar>
+
+<mat-card class="mat-card-standalone" *ngIf="(user$|async) as user">
+    <mat-card-content>
+        {{user.firstName}} {{user.lastName}}
+    </mat-card-content>
+</mat-card>
