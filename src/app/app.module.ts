@@ -16,19 +16,18 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {TypographyComponent} from "../typography/typography.component";
-import {NavListComponent} from "../list/nav-list.component";
 import {SidenavService} from "../sidenav/sidenav.service";
 import {SidenavToggleComponent} from "../sidenav/sidenav-toggle.component";
-import {TitleService} from "../title/title.service";
 import {TitleComponent} from "../title/title.component";
 import {ChipComponent} from "../chip/chip.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {InitService} from '../init/init.service';
-import {ListDetailComponent} from '../list/list-detail.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {NotFoundComponent} from './common/not-found.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
+import {DragAndDropListComponent} from './examples/drag-and-drop-list/drag-and-drop-list.component';
+import {DragAndDropDetailComponent} from './examples/drag-and-drop-list/drag-and-drop-detail.component';
 
 export function initServiceFactory(initService: InitService): Function
 {
@@ -39,12 +38,12 @@ export function initServiceFactory(initService: InitService): Function
     declarations: [
         AppComponent,
         TypographyComponent,
-        NavListComponent,
-        ListDetailComponent,
         SidenavToggleComponent,
         TitleComponent,
         ChipComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        DragAndDropListComponent,
+        DragAndDropDetailComponent
     ],
     imports: [
         BrowserModule,
@@ -67,7 +66,6 @@ export function initServiceFactory(initService: InitService): Function
     ],
     providers: [
         SidenavService,
-        TitleService,
         {
             provide: APP_INITIALIZER,
             useFactory: initServiceFactory,

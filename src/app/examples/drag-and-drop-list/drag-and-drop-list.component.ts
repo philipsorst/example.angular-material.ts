@@ -1,18 +1,18 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from "@angular/core";
-import {TitleService} from "../title/title.service";
-import {User} from '../app/user/user';
-import {UserService} from '../app/user/user.service';
 import {Observable} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CdkDragDrop} from '@angular/cdk/drag-drop';
-import {ScrollService} from '../app/router/scroll-service';
+import {TitleService} from '../../../title/title.service';
+import {User} from '../../user/user';
+import {UserService} from '../../user/user.service';
+import {ScrollService} from '../../router/scroll-service';
 
 @Component({
-    templateUrl: './nav-list.component.html'
+    templateUrl: './drag-and-drop-list.component.html'
 })
-export class NavListComponent implements OnInit, OnDestroy, AfterViewInit
+export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewInit
 {
-    public users: Observable<User[]>;
+    public users$: Observable<User[]>;
 
     public detailActive = false;
 
@@ -34,7 +34,7 @@ export class NavListComponent implements OnInit, OnDestroy, AfterViewInit
     public ngOnInit(): void
     {
         this.titleService.setTitle('List');
-        this.users = this.userService.getUsersObservable();
+        this.users$ = this.userService.getUsersObservable();
     }
 
     /**
@@ -52,7 +52,7 @@ export class NavListComponent implements OnInit, OnDestroy, AfterViewInit
         this.scrollService.restore();
     }
 
-    public trackByUuid(user: User)
+    public trackByUuid(index: number, user: User)
     {
         return user.id;
     }

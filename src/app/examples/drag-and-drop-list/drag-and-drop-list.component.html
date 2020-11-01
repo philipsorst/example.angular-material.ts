@@ -3,8 +3,8 @@
     <ex-title></ex-title>
 </mat-toolbar>
 
-<mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)">
-    <mat-list-item *ngFor="let user of users | async; let idx = index; trackBy: trackByUuid; "
+<mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)" *ngIf="(users$|async) as users">
+    <mat-list-item *ngFor="let user of users; let idx = index; trackBy: trackByUuid; "
                    cdkDrag
                    cdkDragLockAxis="y">
         <mat-icon cdkDragHandle>drag_handle</mat-icon>

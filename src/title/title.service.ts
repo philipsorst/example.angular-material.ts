@@ -2,7 +2,9 @@ import {Injectable} from "@angular/core";
 import {Title} from "@angular/platform-browser";
 import {BehaviorSubject, Observable} from 'rxjs';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class TitleService
 {
     private titleBehaviorSubject = new BehaviorSubject<string>(null);

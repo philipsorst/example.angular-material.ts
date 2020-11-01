@@ -1,13 +1,13 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {UserService} from '../app/user/user.service';
 import {ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs';
-import {TitleService} from '../title/title.service';
+import {UserService} from '../../user/user.service';
+import {TitleService} from '../../../title/title.service';
 
 @Component({
-    templateUrl: './list-detail.component.html'
+    templateUrl: './drag-and-drop-detail.component.html'
 })
-export class ListDetailComponent implements OnInit, OnDestroy
+export class DragAndDropDetailComponent implements OnInit, OnDestroy
 {
     public uuid: string;
 
