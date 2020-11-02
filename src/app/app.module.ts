@@ -15,19 +15,19 @@ import {MatListModule} from "@angular/material/list";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {TypographyComponent} from "../typography/typography.component";
-import {SidenavService} from "../sidenav/sidenav.service";
-import {SidenavToggleComponent} from "../sidenav/sidenav-toggle.component";
-import {TitleComponent} from "../title/title.component";
-import {ChipComponent} from "../chip/chip.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {InitService} from '../init/init.service';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {NotFoundComponent} from './common/not-found.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {DragAndDropListComponent} from './examples/drag-and-drop-list/drag-and-drop-list.component';
 import {DragAndDropDetailComponent} from './examples/drag-and-drop-list/drag-and-drop-detail.component';
+import {ChipComponent} from './components/chip/chip.component';
+import {InitService} from './init/init.service';
+import {TypographyComponent} from './typography/typography.component';
+import {SidenavToggleComponent} from './sidenav/sidenav-toggle.component';
+import {TitleComponent} from './title/title.component';
+import {SidenavService} from './sidenav/sidenav.service';
 
 export function initServiceFactory(initService: InitService): Function
 {

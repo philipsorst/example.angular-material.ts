@@ -1,10 +1,10 @@
 import {Component, OnInit} from "@angular/core";
-import {TitleService} from "../title/title.service";
 import * as faker from 'faker';
 import {FormControl} from "@angular/forms";
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {TitleService} from '../../title/title.service';
 
 @Component({
     templateUrl: './chip.component.html'

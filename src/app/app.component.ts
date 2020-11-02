@@ -1,8 +1,8 @@
 import {ChangeDetectionStrategy, Component, OnInit, ViewChild} from '@angular/core';
 import {MatSidenav} from "@angular/material/sidenav";
-import {SidenavService} from "../sidenav/sidenav.service";
 import {Subscription} from 'rxjs';
 import {RouterService} from './router.service';
+import {SidenavService} from './sidenav/sidenav.service';
 
 @Component({
     selector: 'app-root',

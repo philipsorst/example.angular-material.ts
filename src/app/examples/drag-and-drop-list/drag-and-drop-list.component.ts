@@ -2,12 +2,12 @@ import {AfterViewInit, Component, OnDestroy, OnInit} from "@angular/core";
 import {BehaviorSubject, Observable} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CdkDragDrop} from '@angular/cdk/drag-drop';
-import {TitleService} from '../../../title/title.service';
 import {User} from '../../user/user';
 import {MapBackedUserService} from '../../user/map-backed-user.service';
 import {ScrollService} from '../../router/scroll-service';
 import {UserGeneratorService} from '../../user/user-generator.service';
 import {switchMap} from 'rxjs/operators';
+import {TitleService} from '../../title/title.service';
 
 @Component({
     templateUrl: './drag-and-drop-list.component.html'

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import * as faker from 'faker';
-import {MapBackedUserService} from '../app/user/map-backed-user.service';
+import {MapBackedUserService} from '../user/map-backed-user.service';
 
 @Injectable({
     providedIn: 'root'
