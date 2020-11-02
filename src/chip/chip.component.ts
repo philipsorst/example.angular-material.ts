@@ -3,7 +3,7 @@ import {TitleService} from "../title/title.service";
 import * as faker from 'faker';
 import {FormControl} from "@angular/forms";
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
+import {map, startWith} from 'rxjs/operators';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 
 @Component({
@@ -36,9 +36,10 @@ export class ChipComponent implements OnInit
         }
 
         this.filteredColors$ = this.formControl.valueChanges.pipe(
+            startWith(''),
             map(value => this.availableColors.filter((color: string) => {
                 if (null == value || '' == value.trim()) {
-                    return false;
+                    return true;
                 }
 
                 return color.toLowerCase().indexOf(value.toLowerCase()) !== -1;
