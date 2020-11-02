@@ -3,26 +3,27 @@
     <ex-title></ex-title>
 </mat-toolbar>
 
-<mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)" *ngIf="(users$|async) as users">
-    <mat-list-item *ngFor="let user of users; let idx = index; trackBy: trackByUuid; "
-                   cdkDrag
-                   cdkDragLockAxis="y">
-        <mat-icon cdkDragHandle>drag_handle</mat-icon>
-        <img mat-list-avatar src="{{user.avatarUrl}}">
-        <a mat-line [routerLink]="['/examples', 'drag-and-drop-list', user.id]">{{user.lastName}}
-            , {{user.firstName}} </a>
-        <p mat-line>Index: {{idx}}, SortKey: {{user.sortKey}}</p>
-        <button mat-icon-button [matMenuTriggerFor]="optionsMenu">
-            <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #optionsMenu="matMenu">
-            <button mat-menu-item (click)="remove(user)">Delete</button>
-        </mat-menu>
-    </mat-list-item>
-</mat-nav-list>
+<cdk-virtual-scroll-viewport [itemSize]="72" *ngIf="(users$|async) as users" class="virtual-scroll-content">
+    <mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)">
+        <ng-container *cdkVirtualFor="let user of users; let idx = index; trackBy: trackByUuid;">
+            <mat-list-item cdkDrag cdkDragLockAxis="y">
+                <mat-icon cdkDragHandle>drag_handle</mat-icon>
+                <img mat-list-avatar src="{{user.avatarUrl}}">
+                <a mat-line [routerLink]="['/examples', 'drag-and-drop-list', user.id]">
+                    {{user.lastName}}, {{user.firstName}}
+                </a>
+                <p mat-line>Index: {{idx}}, SortKey: {{user.sortKey}}</p>
+                <button mat-icon-button [matMenuTriggerFor]="optionsMenu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #optionsMenu="matMenu">
+                    <button mat-menu-item (click)="remove(user)">Delete</button>
+                </mat-menu>
+            </mat-list-item>
+        </ng-container>
+    </mat-nav-list>
+</cdk-virtual-scroll-viewport>
 
-<div class="fab-container">
-    <button mat-fab (click)="add()">
-        <mat-icon>add</mat-icon>
-    </button>
-</div>
+<button mat-fab (click)="add()">
+    <mat-icon>add</mat-icon>
+</button>

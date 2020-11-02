@@ -22,7 +22,7 @@ export class MapBackedUserService extends UserService
 
     public init()
     {
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < 5000; i++) {
             const user = this.userGeneratorService.generate(true);
             user.sortKey = 0 === this.users.length ? 0 : this.users[this.users.length - 1].sortKey + 1
             this.users.push(user);

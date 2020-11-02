@@ -40,7 +40,7 @@ export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewIni
     {
         this.titleService.setTitle('Drag and Drop List');
         this.users$ = this.refresh$.pipe(
-            switchMap(() => this.userService.list())
+            switchMap(() => this.userService.list(1, 500))
         );
     }
 

@@ -28,6 +28,7 @@ import {TypographyComponent} from './typography/typography.component';
 import {SidenavToggleComponent} from './sidenav/sidenav-toggle.component';
 import {TitleComponent} from './title/title.component';
 import {SidenavService} from './sidenav/sidenav.service';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 export function initServiceFactory(initService: InitService): Function
 {
@@ -61,6 +62,7 @@ export function initServiceFactory(initService: InitService): Function
         MatChipsModule,
         MatFormFieldModule,
         MatMenuModule,
+        ScrollingModule,
         DragDropModule,
         ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
     ],
