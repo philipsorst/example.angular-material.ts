@@ -1,58 +1,14 @@
 @import "~material-design-icons/iconfont/material-icons.css";
+@import '~@angular/material/theming';
 
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@dontdrinkandroot/ngx-material-extensions/style";
 
-$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
-$grid-breakpoints: (xs: 0, sm: 600px, md: 960px, lg: 1280px, xl: 1920px) !default;
-$font-family-monospace: "Roboto Mono", monospace !default;
+.mat-toolbar {
+    @extend .mat-elevation-z1;
+}
 
-// Space
-$spacer: 1rem !default;
-$spacers: (0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3));
-
-// Font weights
-$font-weight-lighter: lighter !default;
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-bold: 700 !default;
-$font-weight-bolder: bolder !default;
-
-// Colors
-$white: #fff !default;
-$gray-500: #9E9E9E !default;
-$black: #000 !default;
-$body-color: #fafafa !default;
-$text-muted: $gray-500 !default;
-$success: #4CAF50;
-$warning: #FFC107;
-$danger: #F44336;
-$theme-colors: ("success": $success, "warning": $warning, "danger": $danger);
-
-// Toggles
-$enable-deprecation-messages: false;
-
-// Links
-$emphasized-link-hover-darken-percentage: 15% !default;
-
-@import '~bootstrap/scss/mixins/breakpoints';
-@import '~bootstrap/scss/mixins/deprecate';
-@import '~bootstrap/scss/mixins/hover';
-@import '~bootstrap/scss/mixins/text-emphasis';
-@import '~bootstrap/scss/mixins/text-hide';
-@import '~bootstrap/scss/mixins/text-truncate';
-
-@import '~bootstrap/scss/utilities/display';
-@import '~bootstrap/scss/utilities/flex';
-@import '~bootstrap/scss/utilities/spacing';
-@import '~bootstrap/scss/utilities/text';
-
-$toolbar-height: 56px;
-$toolbar-height-sm-up: 64px;
-$fab-height: 88px;
-
-html, body {
-    padding: 0;
-    margin: 0;
+ddr-mat-sidenav-toggle {
+    @extend .d-md-none;
 }
 
 .mat-fab {
@@ -92,36 +48,6 @@ html, body {
 
 ex-title {
     flex: 1 1 auto;
-}
-
-.mat-card-standalone {
-    @extend .m-3;
-}
-
-ex-sidenav-toggle {
-    margin-right: 1rem;
-}
-
-//////////
-// Flex //
-//////////
-
-.flex-container-row {
-    display: flex !important;
-    flex-direction: row;
-
-    > * {
-        flex: 1;
-    }
-}
-
-.flex-container-column {
-    display: flex !important;
-    flex-direction: column;
-
-    > * {
-        flex: 1;
-    }
 }
 
 .cdk-drag-placeholder {

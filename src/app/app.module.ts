@@ -25,10 +25,9 @@ import {DragAndDropDetailComponent} from './examples/drag-and-drop-list/drag-and
 import {ChipComponent} from './components/chip/chip.component';
 import {InitService} from './init/init.service';
 import {TypographyComponent} from './typography/typography.component';
-import {SidenavToggleComponent} from './sidenav/sidenav-toggle.component';
 import {TitleComponent} from './title/title.component';
-import {SidenavService} from './sidenav/sidenav.service';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import {DdrAngularMaterialExtensionsModule} from '@dontdrinkandroot/angular-material-extensions';
 
 export function initServiceFactory(initService: InitService): Function
 {
@@ -39,7 +38,6 @@ export function initServiceFactory(initService: InitService): Function
     declarations: [
         AppComponent,
         TypographyComponent,
-        SidenavToggleComponent,
         TitleComponent,
         ChipComponent,
         NotFoundComponent,
@@ -64,10 +62,10 @@ export function initServiceFactory(initService: InitService): Function
         MatMenuModule,
         ScrollingModule,
         DragDropModule,
+        DdrAngularMaterialExtensionsModule,
         ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
     ],
     providers: [
-        SidenavService,
         {
             provide: APP_INITIALIZER,
             useFactory: initServiceFactory,

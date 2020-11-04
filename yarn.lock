@@ -1142,6 +1142,20 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@dontdrinkandroot/angular-extensions@^0.0":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@dontdrinkandroot/angular-extensions/-/angular-extensions-0.0.13.tgz#bcde013873d114f185153b419f6f0a4a62b12449"
+  integrity sha512-6LAmkmO7r5z/upY82H3hXgFM8eUhJ8IZXdsxGLtuaIgaMBltd8R9F1Y4aW+o1eoawpVKaV8Yusamulds9vv2Kw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@dontdrinkandroot/angular-material-extensions@^0.0":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@dontdrinkandroot/angular-material-extensions/-/angular-material-extensions-0.0.5.tgz#f878647ad88b8d7f050f17aa45f47b0a45bc5eda"
+  integrity sha512-4ab5QVvyBqEtBq6wCv6aqln500oYQRl0lXtLT+7HKo/dDkcmWIBzXfMLJKzQY8x3Emr6S8k1WxxdiXZ257MBcA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@istanbuljs/schema@^0.1.2":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"

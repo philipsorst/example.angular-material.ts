@@ -26,6 +26,8 @@
         "@angular/pwa": "0.1002.0",
         "@angular/router": "^10.2.1",
         "@angular/service-worker": "^10.2.1",
+        "@dontdrinkandroot/angular-extensions": "^0.0",
+        "@dontdrinkandroot/angular-material-extensions": "^0.0",
         "bootstrap": "^4.5.3",
         "core-js": "^2.5.3",
         "faker": "^5.1.0",

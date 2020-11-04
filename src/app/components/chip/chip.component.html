@@ -1,9 +1,9 @@
-<mat-toolbar color="primary">
-    <ex-sidenav-toggle></ex-sidenav-toggle>
+<mat-toolbar>
+    <ddr-mat-sidenav-toggle></ddr-mat-sidenav-toggle>
     <ex-title></ex-title>
 </mat-toolbar>
 
-<mat-card class="flex-container-row">
+<mat-card class="d-flex flex-column">
     <mat-form-field>
         <mat-chip-list #chipList>
             <mat-chip *ngFor="let color of colors" selectable="true" removable="true" (removed)="removeColor(color)">
