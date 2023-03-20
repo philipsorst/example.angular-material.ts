@@ -7,7 +7,8 @@ import {faker} from '@faker-js/faker';
 })
 export class UserGeneratorService
 {
-    public generate(): User {
+    public generate(): User
+    {
         let firstName = faker.name.firstName();
         let lastName = faker.name.lastName();
         return {

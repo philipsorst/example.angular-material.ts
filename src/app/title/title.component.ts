@@ -6,10 +6,12 @@ import {Observable} from 'rxjs';
     selector: 'ex-title',
     template: '<h2>{{title$ | async}}</h2>'
 })
-export class TitleComponent {
+export class TitleComponent
+{
     public title$: Observable<string>;
 
-    constructor(private titleService: TitleService) {
+    constructor(private titleService: TitleService)
+    {
         this.title$ = this.titleService.getTitleObservable();
     }
 }

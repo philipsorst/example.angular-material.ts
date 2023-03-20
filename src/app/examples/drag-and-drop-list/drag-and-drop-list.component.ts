@@ -12,14 +12,11 @@ import {TitleService} from '../../title/title.service';
 @Component({
     templateUrl: './drag-and-drop-list.component.html'
 })
-export class DragAndDropListComponent implements OnInit, AfterViewInit {
+export class DragAndDropListComponent implements OnInit, AfterViewInit
+{
     private refresh$ = new BehaviorSubject(Date.now());
 
     public users$: Observable<User[]>;
-
-    public detailActive = false;
-
-    public opacity: number = 100;
 
     constructor(
         private titleService: TitleService,
@@ -28,7 +25,8 @@ export class DragAndDropListComponent implements OnInit, AfterViewInit {
         private userService: MapBackedUserService,
         private scrollService: ScrollService,
         private userGeneratorService: UserGeneratorService
-    ) {
+    )
+    {
         this.users$ = this.refresh$.pipe(
             tap(() => console.log('refreshing')),
             switchMap(() => this.userService.list(1, 500))

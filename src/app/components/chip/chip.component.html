@@ -3,14 +3,16 @@
     <ex-title></ex-title>
 </mat-toolbar>
 
-<mat-card class="d-flex flex-column">
-    <mat-form-field>
+<mat-card class="mt-3 mb-3">
+    <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Colors</mat-label>
         <mat-chip-grid #chipGrid>
-            <mat-chip *ngFor="let color of colors" selectable="true" removable="true" (removed)="removeColor(color)">
+            <mat-chip-row *ngFor="let color of colors" removable="true" (removed)="removeColor(color)">
                 {{color}}
-                <mat-icon matChipRemove>cancel</mat-icon>
-            </mat-chip>
-
+                <button matChipRemove [attr.aria-label]="'remove ' + color">
+                    <mat-icon>cancel</mat-icon>
+                </button>
+            </mat-chip-row>
             <input
                     placeholder="Pick some colors"
                     #chipInput

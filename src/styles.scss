@@ -3,3 +3,10 @@
 @import "@fontsource/roboto/500.css";
 @import "@fontsource/material-icons";
 @import "node_modules/@dontdrinkandroot/ngx-material-extensions";
+
+@media (min-width: $ddr-breakpoint-md) {
+    .mat-sidenav-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

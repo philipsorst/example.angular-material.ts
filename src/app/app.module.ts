@@ -25,10 +25,13 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatOptionModule} from "@angular/material/core";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatButtonModule} from "@angular/material/button";
+import {CardComponent} from "./components/card/card.component";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
     declarations: [
         AppComponent,
+        CardComponent,
         ChipComponent,
         DragAndDropDetailComponent,
         DragAndDropListComponent,
@@ -52,6 +55,7 @@ import {MatButtonModule} from "@angular/material/button";
         MatListModule,
         MatMenuModule,
         MatOptionModule,
+        MatProgressBarModule,
         MatToolbarModule,
         ReactiveFormsModule,
         ScrollingModule

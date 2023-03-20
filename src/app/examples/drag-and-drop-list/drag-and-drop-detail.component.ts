@@ -10,11 +10,13 @@ import {isNonNull} from '@dontdrinkandroot/ngx-extensions';
 @Component({
     templateUrl: './drag-and-drop-detail.component.html'
 })
-export class DragAndDropDetailComponent {
+export class DragAndDropDetailComponent
+{
     public user$: Observable<User>;
 
     constructor(
-        private route: ActivatedRoute, private userService: MapBackedUserService, private titleService: TitleService) {
+        private route: ActivatedRoute, private userService: MapBackedUserService, private titleService: TitleService)
+    {
         const uuid$ = this.route.paramMap.pipe(
             map(routeParams => routeParams.get('uuid')),
             filter(isNonNull)

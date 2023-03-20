@@ -5,6 +5,7 @@ import {DragAndDropListComponent} from "./examples/drag-and-drop-list/drag-and-d
 import {DragAndDropDetailComponent} from "./examples/drag-and-drop-list/drag-and-drop-detail.component";
 import {ChipComponent} from "./components/chip/chip.component";
 import {NotFoundComponent} from "./common/not-found.component";
+import {CardComponent} from "./components/card/card.component";
 
 const routes: Routes = [
     {
@@ -35,8 +36,12 @@ const routes: Routes = [
         path: 'components',
         children: [
             {
-                path: 'chip',
+                path: 'chips',
                 component: ChipComponent
+            },
+            {
+                path: 'card',
+                component: CardComponent
             }
         ]
     },

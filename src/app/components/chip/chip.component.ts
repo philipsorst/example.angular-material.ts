@@ -49,7 +49,7 @@ export class ChipComponent implements OnInit
 
     public removeColor(color: string)
     {
-        let index = this.colors.indexOf(color);
+        const index = this.colors.indexOf(color);
         if (index >= 0) {
             this.colors.splice(index, 1);
         }

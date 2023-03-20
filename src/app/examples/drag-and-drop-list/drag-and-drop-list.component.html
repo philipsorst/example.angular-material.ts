@@ -3,27 +3,6 @@
     <ex-title></ex-title>
 </mat-toolbar>
 
-<!--<mat-nav-list *ngIf="(users$|async) as users">-->
-<!--    <mat-list-item *ngFor="let user of users; let idx = index; trackBy: trackByUuid;">-->
-
-<!--        <img matListItemAvatar src="{{user.avatarUrl}}" alt="avatar"/>-->
-<!--        <a matListItemTitle [routerLink]="['/examples', 'drag-and-drop-list', user.id]">-->
-<!--            {{user.lastName}}, {{user.firstName}}-->
-<!--        </a>-->
-<!--        <p matListItemLine>Index: {{idx}}, SortKey: {{user.sortKey}}</p>-->
-
-<!--        <div matListItemMeta>-->
-<!--            <mat-icon>drag_handle</mat-icon>-->
-<!--            <button mat-icon-button [matMenuTriggerFor]="optionsMenu">-->
-<!--                <mat-icon>more_vert</mat-icon>-->
-<!--            </button>-->
-<!--            <mat-menu #optionsMenu="matMenu">-->
-<!--                <button mat-menu-item (click)="remove(user)">Delete</button>-->
-<!--            </mat-menu>-->
-<!--        </div>-->
-<!--    </mat-list-item>-->
-<!--</mat-nav-list>-->
-
 <cdk-virtual-scroll-viewport [itemSize]="72" *ngIf="(users$|async) as users" class="virtual-scroll-content"
                              style="height: 100vh;">
     <mat-nav-list cdkDropList (cdkDropListDropped)="dropped($event)">
@@ -31,9 +10,9 @@
             <mat-list-item cdkDrag cdkDragLockAxis="y">
                 <img matListItemAvatar src="{{user.avatarUrl}}" alt="avatar"/>
                 <a matListItemTitle [routerLink]="['/examples', 'drag-and-drop-list', user.id]">
-                    {{user.lastName}}, {{user.firstName}}
+                    <span>{{user.lastName}}, {{user.firstName}}</span>
                 </a>
-                <p matListItemLine>Index: {{idx}}, SortKey: {{user.sortKey}}</p>
+                <div matListItemLine>Index: {{idx}}, SortKey: {{user.sortKey}}</div>
 
                 <div matListItemMeta>
                     <mat-icon cdkDragHandle>drag_handle</mat-icon>
