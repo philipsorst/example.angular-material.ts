@@ -23,7 +23,7 @@ export class MapBackedUserService extends UserService
     public init()
     {
         for (let i = 0; i < 5000; i++) {
-            const user = this.userGeneratorService.generate(true);
+            const user = this.userGeneratorService.generate();
             user.sortKey = 0 === this.users.length ? 0 : this.users[this.users.length - 1].sortKey + 1
             this.users.push(user);
             this.uuidUserMap.set(user.id, user);
@@ -51,9 +51,8 @@ export class MapBackedUserService extends UserService
         const startIndex = (page - 1) * perPage;
         const endIndex = Math.min((page * perPage), this.users.length);
         const slicedUsers = this.users.slice(startIndex, endIndex);
-        const paginatedResult = new PaginatedResult<User>();
+        const paginatedResult = new PaginatedResult<User>(new Pagination(this.users.length, page, perPage));
         slicedUsers.forEach((user, index) => paginatedResult[index] = user);
-        paginatedResult.pagination = Pagination.fromTotal(this.users.length, page, perPage);
 
         return of(paginatedResult);
     }
@@ -119,7 +118,7 @@ export class MapBackedUserService extends UserService
     {
         console.debug('MapBackedUserService', 'move', previousIndex, currentIndex);
         if (previousIndex === currentIndex) {
-            return;
+            of(false);
         }
 
         let targetNextIdx;

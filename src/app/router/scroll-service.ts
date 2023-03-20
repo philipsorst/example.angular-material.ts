@@ -18,8 +18,9 @@ export class ScrollService
                 filter(e => e instanceof Scroll)
             )
             .subscribe(e => {
-                if ((e as Scroll).position) {
-                    this.lastScrollPosition = (e as Scroll).position;
+                let position = (e as Scroll).position;
+                if (null != position) {
+                    this.lastScrollPosition = position;
                     // console.log('scrollPosition', e)
                 }
             });

@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import * as faker from 'faker';
+import {faker} from '@faker-js/faker';
 import {FormControl} from "@angular/forms";
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
@@ -13,7 +13,7 @@ export class ChipComponent implements OnInit
 {
     public availableColors: string[] = [];
 
-    public filteredColors$: Observable<string[]>;
+    public filteredColors$!: Observable<string[]>;
 
     public colors: string[] = [];
 

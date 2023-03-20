@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnDestroy, OnInit} from "@angular/core";
+import {AfterViewInit, Component, OnInit} from "@angular/core";
 import {BehaviorSubject, Observable} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CdkDragDrop} from '@angular/cdk/drag-drop';
@@ -6,14 +6,13 @@ import {User} from '../../user/user';
 import {MapBackedUserService} from '../../user/map-backed-user.service';
 import {ScrollService} from '../../router/scroll-service';
 import {UserGeneratorService} from '../../user/user-generator.service';
-import {switchMap} from 'rxjs/operators';
+import {switchMap, tap} from 'rxjs/operators';
 import {TitleService} from '../../title/title.service';
 
 @Component({
     templateUrl: './drag-and-drop-list.component.html'
 })
-export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewInit
-{
+export class DragAndDropListComponent implements OnInit, AfterViewInit {
     private refresh$ = new BehaviorSubject(Date.now());
 
     public users$: Observable<User[]>;
@@ -29,8 +28,11 @@ export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewIni
         private userService: MapBackedUserService,
         private scrollService: ScrollService,
         private userGeneratorService: UserGeneratorService
-    )
-    {
+    ) {
+        this.users$ = this.refresh$.pipe(
+            tap(() => console.log('refreshing')),
+            switchMap(() => this.userService.list(1, 500))
+        );
     }
 
     /**
@@ -39,16 +41,6 @@ export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewIni
     public ngOnInit(): void
     {
         this.titleService.setTitle('Drag and Drop List');
-        this.users$ = this.refresh$.pipe(
-            switchMap(() => this.userService.list(1, 500))
-        );
-    }
-
-    /**
-     * @override
-     */
-    public ngOnDestroy(): void
-    {
     }
 
     /**
@@ -66,7 +58,7 @@ export class DragAndDropListComponent implements OnInit, OnDestroy, AfterViewIni
 
     public add()
     {
-        this.userService.create(this.userGeneratorService.generate(true))
+        this.userService.create(this.userGeneratorService.generate())
             .subscribe({next: () => this.refresh$.next(Date.now())})
     }
 

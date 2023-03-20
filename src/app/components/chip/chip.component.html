@@ -5,7 +5,7 @@
 
 <mat-card class="d-flex flex-column">
     <mat-form-field>
-        <mat-chip-list #chipList>
+        <mat-chip-grid #chipGrid>
             <mat-chip *ngFor="let color of colors" selectable="true" removable="true" (removed)="removeColor(color)">
                 {{color}}
                 <mat-icon matChipRemove>cancel</mat-icon>
@@ -16,12 +16,12 @@
                     #chipInput
                     [formControl]="formControl"
                     [matAutocomplete]="autoComplete"
-                    [matChipInputFor]="chipList"
+                    [matChipInputFor]="chipGrid"
                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                     (matChipInputTokenEnd)="addColor($event.value, chipInput)"
                     matChipInputAddOnBlur="false"
             />
-        </mat-chip-list>
+        </mat-chip-grid>
         <mat-autocomplete #autoComplete="matAutocomplete" (optionSelected)="addColor($event.option.value, chipInput)">
             <mat-option *ngFor="let filteredColor of (filteredColors$|async)" [value]="filteredColor">
                 {{ filteredColor }}

@@ -1,36 +1,15 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
+import {Component} from "@angular/core";
 import {TitleService} from "./title.service";
-import {Subscription} from 'rxjs';
+import {Observable} from 'rxjs';
 
 @Component({
     selector: 'ex-title',
-    template: '<h2>{{title}}</h2>'
+    template: '<h2>{{title$ | async}}</h2>'
 })
-export class TitleComponent implements OnInit, OnDestroy
-{
-    public title: string;
+export class TitleComponent {
+    public title$: Observable<string>;
 
-    private titleSubscription: Subscription;
-
-    constructor(private titleService: TitleService)
-    {
-    }
-
-    /**
-     * @override
-     */
-    public ngOnInit()
-    {
-        this.titleSubscription = this.titleService.getTitleObservable().subscribe((title: string) => {
-            this.title = title;
-        })
-    }
-
-    /**
-     * @override
-     */
-    public ngOnDestroy()
-    {
-        this.titleSubscription.unsubscribe();
+    constructor(private titleService: TitleService) {
+        this.title$ = this.titleService.getTitleObservable();
     }
 }

@@ -1,29 +1,11 @@
-export class Pagination
-{
-    constructor(page: number = 1, perPage: number = 50)
-    {
-        this.page = page;
-        this.perPage = perPage;
+export class Pagination {
+    public readonly totalPages: number;
+
+    constructor(public readonly total: number, public readonly page: number = 1, public readonly perPage: number = 50) {
+        this.totalPages = Math.ceil(total / perPage)
     }
 
-    page: number;
-    perPage: number;
-    total: number;
-    totalPages: number;
-
-    public hasMorePages()
-    {
+    public hasMorePages() {
         return this.page === 0 || this.page < this.totalPages;
-    }
-
-    public static fromTotal(total: number, page: number, perPage: number): Pagination
-    {
-        let pagination = new Pagination();
-        pagination.total = total;
-        pagination.page = page;
-        pagination.perPage = perPage;
-        pagination.totalPages = Math.ceil(total / perPage);
-
-        return pagination;
     }
 }

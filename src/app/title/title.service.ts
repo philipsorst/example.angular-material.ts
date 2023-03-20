@@ -7,7 +7,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 })
 export class TitleService
 {
-    private titleBehaviorSubject = new BehaviorSubject<string>(null);
+    private titleBehaviorSubject = new BehaviorSubject<string>('');
 
     constructor(private platformTitle: Title)
     {

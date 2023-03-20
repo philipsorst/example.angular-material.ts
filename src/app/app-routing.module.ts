@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {NotFoundComponent} from './common/not-found.component';
-import {DragAndDropListComponent} from './examples/drag-and-drop-list/drag-and-drop-list.component';
-import {DragAndDropDetailComponent} from './examples/drag-and-drop-list/drag-and-drop-detail.component';
-import {ChipComponent} from './components/chip/chip.component';
-import {TypographyComponent} from './typography/typography.component';
+import {TypographyComponent} from "./typography/typography.component";
+import {DragAndDropListComponent} from "./examples/drag-and-drop-list/drag-and-drop-list.component";
+import {DragAndDropDetailComponent} from "./examples/drag-and-drop-list/drag-and-drop-detail.component";
+import {ChipComponent} from "./components/chip/chip.component";
+import {NotFoundComponent} from "./common/not-found.component";
 
 const routes: Routes = [
     {
@@ -47,9 +47,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRoutingModule
-{
+export class AppRoutingModule {
 }
