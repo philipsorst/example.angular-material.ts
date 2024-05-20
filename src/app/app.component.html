@@ -1,20 +1,39 @@
-<ddr-mat-sidenav-container [stayOpenOnLargeScreen]="true">
-    <div slot="mat-sidenav">
+<mat-sidenav-container>
+    <mat-sidenav
+        #sidenav
+        [mode]="(desktopView$|async) ? 'side' : 'over'"
+        [fixedInViewport]="true"
+        [opened]="desktopView$|async"
+    >
         <mat-toolbar>
-            <h1>Angular material Example</h1>
+            <h1>Material Example</h1>
         </mat-toolbar>
+
         <mat-nav-list>
-            <a mat-list-item routerLink="/typography">Typography</a>
+            <a mat-list-item
+               [routerLink]="['/', 'typography']"
+               [routerLinkActive]="['mdc-list-item--activated']"
+            >
+                Typography
+            </a>
             <mat-divider></mat-divider>
-            <div matSubheader class="mat-caption">Components</div>
-            <a mat-list-item routerLink="/components/card">Card</a>
-            <a mat-list-item routerLink="/components/chips">Chips</a>
-            <mat-divider></mat-divider>
-            <div matSubheader class="mat-caption">Examples</div>
-            <a mat-list-item routerLink="/examples/drag-and-drop-list">Drag and Drop List</a>
+            <div matSubheader class="mat-title-medium">Components</div>
+            <a mat-list-item
+               [routerLink]="['/', 'components', 'button']"
+               [routerLinkActive]="['mdc-list-item--activated']"
+            >
+                Button
+            </a>
         </mat-nav-list>
-    </div>
-    <div slot="mat-sidenav-content">
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <button mat-icon-button (click)="sidenav.toggle()" class="ddr-sidenav-toggle">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <h1>{{ title$|async }}</h1>
+        </mat-toolbar>
         <router-outlet></router-outlet>
-    </div>
-</ddr-mat-sidenav-container>
+    </mat-sidenav-content>
+</mat-sidenav-container>

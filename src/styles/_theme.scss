@@ -1,0 +1,129 @@
+@use '@angular/material-experimental' as matx;
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$ddr-mat-light-primary: matx.$m3-azure-palette !default;
+$ddr-mat-light-tertiary: matx.$m3-magenta-palette !default;
+$ddr-mat-dark-primary: matx.$m3-azure-palette !default;
+$ddr-mat-dark-tertiary: matx.$m3-magenta-palette !default;
+
+$ddr-light-theme: matx.define-theme((
+        color: (
+                primary: $ddr-mat-light-primary,
+                tertiary: $ddr-mat-light-tertiary,
+        ),
+    //typography: (
+    //        plain-family: 'Roboto Flex',
+    //        brand-family: 'Roboto',
+    //        //bold-weight: 'Roboto Flex',
+    //        //medium-weight: 'Roboto Flex',
+    //        regular-weight: 400,
+    //)
+)) !default;
+
+$ddr-dark-theme: matx.define-theme((
+        color: (
+                theme-type: dark,
+                primary: $ddr-mat-dark-primary,
+                tertiary: $ddr-mat-dark-tertiary,
+        ),
+    //typography: (
+    //        plain-family: 'Roboto Flex',
+    //        brand-family: 'Roboto',
+    //        //bold-weight 'Roboto Flex',
+    //        regular-weight: 400
+    //)
+)) !default;
+
+html {
+    @include mat.all-component-themes($ddr-light-theme);
+
+    &.mat-secondary {
+        @include mat.button-color($ddr-light-theme, $color-variant: secondary);
+    }
+
+    &.mat-tertiary {
+        @include mat.button-color($ddr-light-theme, $color-variant: tertiary);
+    }
+
+    &.mat-error {
+        @include mat.button-color($ddr-light-theme, $color-variant: error);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        @include mat.all-component-colors($ddr-dark-theme);
+
+        &.mat-secondary {
+            @include mat.button-color($ddr-dark-theme, $color-variant: secondary);
+        }
+
+        &.mat-tertiary {
+            @include mat.button-color($ddr-dark-theme, $color-variant: tertiary);
+        }
+
+        &.mat-error {
+            @include mat.button-color($ddr-dark-theme, $color-variant: error);
+        }
+    }
+}
+
+@include mat.typography-hierarchy($ddr-light-theme);
+
+.mat-mdc-button {
+    &.mat-secondary {
+        @include mat.button-color($ddr-light-theme, $color-variant: secondary);
+    }
+
+    &.mat-tertiary {
+        @include mat.button-color($ddr-light-theme, $color-variant: tertiary);
+    }
+
+    &.mat-error {
+        @include mat.button-color($ddr-light-theme, $color-variant: error);
+    }
+}
+
+.mat-mdc-raised-button {
+    &.mat-secondary {
+        @include mat.button-color($ddr-light-theme, $color-variant: secondary);
+    }
+
+    &.mat-tertiary {
+        @include mat.button-color($ddr-light-theme, $color-variant: tertiary);
+    }
+
+    &.mat-error {
+        @include mat.button-color($ddr-light-theme, $color-variant: error);
+    }
+}
+
+.mat-mdc-outlined-button {
+    &.mat-secondary {
+        @include mat.button-color($ddr-light-theme, $color-variant: secondary);
+    }
+
+    &.mat-tertiary {
+        @include mat.button-color($ddr-light-theme, $color-variant: tertiary);
+    }
+
+    &.mat-error {
+        @include mat.button-color($ddr-light-theme, $color-variant: error);
+    }
+}
+
+.mat-mdc-unelevated-button {
+    &.mat-secondary {
+        @include mat.button-color($ddr-light-theme, $color-variant: secondary);
+    }
+
+    &.mat-tertiary {
+        @include mat.button-color($ddr-light-theme, $color-variant: tertiary);
+    }
+
+    &.mat-error {
+        @include mat.button-color($ddr-light-theme, $color-variant: error);
+    }
+}

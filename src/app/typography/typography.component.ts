@@ -1,17 +1,16 @@
-import {Component, OnInit} from "@angular/core";
-import {TitleService} from "../title/title.service";
+import {Component} from "@angular/core";
+import {MatCardModule} from "@angular/material/card";
+import {ToolbarService} from "../toolbar/toolbar.service";
 
 @Component({
-    templateUrl: './typography.component.html'
+    standalone: true,
+    templateUrl: 'typography.component.html',
+    imports: [
+        MatCardModule
+    ]
 })
-export class TypographyComponent implements OnInit
-{
-    constructor(private titleService: TitleService)
-    {
-    }
-
-    public ngOnInit(): void
-    {
-        this.titleService.setTitle('Typography');
+export class TypographyComponent {
+    constructor(private readonly toolbarService: ToolbarService) {
+        this.toolbarService.setTitle('Typography');
     }
 }
