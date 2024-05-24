@@ -36,40 +36,6 @@ $ddr-dark-theme: matx.define-theme((
     //)
 )) !default;
 
-html {
-    @include mat.all-component-themes($ddr-light-theme);
-
-    &.mat-secondary {
-        @include mat.button-color($ddr-light-theme, $color-variant: secondary);
-    }
-
-    &.mat-tertiary {
-        @include mat.button-color($ddr-light-theme, $color-variant: tertiary);
-    }
-
-    &.mat-error {
-        @include mat.button-color($ddr-light-theme, $color-variant: error);
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        @include mat.all-component-colors($ddr-dark-theme);
-
-        &.mat-secondary {
-            @include mat.button-color($ddr-dark-theme, $color-variant: secondary);
-        }
-
-        &.mat-tertiary {
-            @include mat.button-color($ddr-dark-theme, $color-variant: tertiary);
-        }
-
-        &.mat-error {
-            @include mat.button-color($ddr-dark-theme, $color-variant: error);
-        }
-    }
-}
-
 @include mat.typography-hierarchy($ddr-light-theme);
 
 .mat-mdc-button {
