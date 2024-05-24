@@ -25,7 +25,7 @@ $ddr-dark-theme: mat.define-theme((
 :root {
     @include mat.all-component-themes($ddr-light-theme);
     @media (prefers-color-scheme: dark) {
-        @include mat.all-component-themes($ddr-dark-theme);
+        @include mat.all-component-colors($ddr-dark-theme);
     }
 }
 
