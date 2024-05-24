@@ -15,4 +15,15 @@
             }
         }
     }
+
+    .mat-sidenav-content {
+        min-height: 100vh;
+    }
+}
+
+.ddr-mat-fixed-toolbar-container {
+    height: var(--mat-toolbar-mobile-height);
+    @media (min-width: $ddr-breakpoint-sm) {
+        height: var(--mat-toolbar-standard-height);
+    }
 }

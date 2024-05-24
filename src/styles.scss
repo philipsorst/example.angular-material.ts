@@ -33,33 +33,25 @@ body.scrolled {
 .mat-sidenav-container {
 
     .mat-sidenav {
-        .mat-toolbar {
+        .ddr-mat-fixed-toolbar-container {
             display: none;
         }
 
-        @media (min-width: $ddr-breakpoint-sm) {
-            padding-top: var(--mat-toolbar-standard-height);
-            .mat-toolbar {
-                display: flex;
-                width: 360px;
-            }
-        }
-    }
+        @media (min-width: $ddr-breakpoint-md) {
+            .ddr-mat-fixed-toolbar-container {
+                display: block;
 
-    .mat-sidenav-content {
-        padding-top: var(--mat-toolbar-mobile-height);
-        @media (min-width: $ddr-breakpoint-sm) {
-            padding-top: var(--mat-toolbar-standard-height);
+                .mat-toolbar {
+                    width: 360px;
+                }
+            }
         }
     }
 }
 
 button.ddr-sidenav-toggle {
     margin-right: .5rem;
-}
-
-@media (min-width: $ddr-breakpoint-md) {
-    button.ddr-sidenav-toggle {
+    @media (min-width: $ddr-breakpoint-md) {
         display: none;
     }
 }
