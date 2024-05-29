@@ -19,7 +19,7 @@
                 Typography
             </a>
             <mat-divider></mat-divider>
-            <div matSubheader class="mat-title-medium">Components</div>
+            <div matSubheader class="mat-title-small">Components</div>
             <a mat-list-item
                [routerLink]="['/', 'components', 'button']"
                [routerLinkActive]="['mdc-list-item--activated']"
@@ -31,7 +31,7 @@
 
     <mat-sidenav-content>
         <div class="ddr-mat-fixed-toolbar-container">
-            <mat-toolbar>
+            <mat-toolbar class="ddr-mat-icon-start">
                 <button mat-icon-button (click)="sidenav.toggle()" class="ddr-sidenav-toggle">
                     <mat-icon>menu</mat-icon>
                 </button>

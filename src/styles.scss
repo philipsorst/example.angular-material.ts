@@ -47,10 +47,18 @@ body.scrolled {
             }
         }
     }
+
+    .mat-sidenav-content {
+        .mat-toolbar {
+            @media (max-width: $ddr-breakpoint-md) {
+                padding-left: .25rem; // Toggle is shown
+            }
+        }
+    }
 }
 
 button.ddr-sidenav-toggle {
-    margin-right: .5rem;
+    margin-right: .25rem;
     @media (min-width: $ddr-breakpoint-md) {
         display: none;
     }

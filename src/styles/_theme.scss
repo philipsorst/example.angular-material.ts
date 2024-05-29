@@ -122,3 +122,31 @@ $ddr-dark-theme: mat.define-theme((
         }
     }
 }
+
+.text-primary {
+    color: mat.get-theme-color($ddr-light-theme, 'primary');
+    @media (prefers-color-scheme: dark) {
+        color: mat.get-theme-color($ddr-dark-theme, 'primary');
+    }
+}
+
+.text-secondary {
+    color: mat.get-theme-color($ddr-light-theme, 'secondary');
+    @media (prefers-color-scheme: dark) {
+        color: mat.get-theme-color($ddr-dark-theme, 'secondary');
+    }
+}
+
+.text-tertiary {
+    color: mat.get-theme-color($ddr-light-theme, 'tertiary');
+    @media (prefers-color-scheme: dark) {
+        color: mat.get-theme-color($ddr-dark-theme, 'tertiary');
+    }
+}
+
+.text-error {
+    color: mat.get-theme-color($ddr-light-theme, 'error');
+    @media (prefers-color-scheme: dark) {
+        color: mat.get-theme-color($ddr-dark-theme, 'error');
+    }
+}
