@@ -19,12 +19,18 @@
                 Typography
             </a>
             <mat-divider></mat-divider>
-            <div matSubheader class="mat-title-small">Components</div>
+            <div matSubheader class="mat-title-small text-secondary">Components</div>
             <a mat-list-item
                [routerLink]="['/', 'components', 'button']"
                [routerLinkActive]="['mdc-list-item--activated']"
             >
                 Button
+            </a>
+            <a mat-list-item
+               [routerLink]="['/', 'components', 'card']"
+               [routerLinkActive]="['mdc-list-item--activated']"
+            >
+                Card
             </a>
         </mat-nav-list>
     </mat-sidenav>

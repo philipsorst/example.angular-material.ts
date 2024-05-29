@@ -124,29 +124,93 @@ $ddr-dark-theme: mat.define-theme((
 }
 
 .text-primary {
-    color: mat.get-theme-color($ddr-light-theme, 'primary');
+    color: mat.get-theme-color($ddr-light-theme, primary) !important;
     @media (prefers-color-scheme: dark) {
-        color: mat.get-theme-color($ddr-dark-theme, 'primary');
+        color: mat.get-theme-color($ddr-dark-theme, primary) !important;
     }
 }
 
 .text-secondary {
-    color: mat.get-theme-color($ddr-light-theme, 'secondary');
+    color: mat.get-theme-color($ddr-light-theme, secondary) !important;
     @media (prefers-color-scheme: dark) {
-        color: mat.get-theme-color($ddr-dark-theme, 'secondary');
+        color: mat.get-theme-color($ddr-dark-theme, secondary) !important;
     }
 }
 
 .text-tertiary {
-    color: mat.get-theme-color($ddr-light-theme, 'tertiary');
+    color: mat.get-theme-color($ddr-light-theme, tertiary) !important;
     @media (prefers-color-scheme: dark) {
-        color: mat.get-theme-color($ddr-dark-theme, 'tertiary');
+        color: mat.get-theme-color($ddr-dark-theme, tertiary) !important;
     }
 }
 
 .text-error {
-    color: mat.get-theme-color($ddr-light-theme, 'error');
+    color: mat.get-theme-color($ddr-light-theme, error) !important;
     @media (prefers-color-scheme: dark) {
-        color: mat.get-theme-color($ddr-dark-theme, 'error');
+        color: mat.get-theme-color($ddr-dark-theme, error) !important;
     }
 }
+
+.bg-primary-container {
+    background-color: mat.get-theme-color($ddr-light-theme, primary-container) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, primary-container) !important;
+    }
+}
+
+.bg-secondary-container {
+    background-color: mat.get-theme-color($ddr-light-theme, secondary-container) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, secondary-container) !important;
+    }
+}
+
+.bg-tertiary-container {
+    background-color: mat.get-theme-color($ddr-light-theme, tertiary-container) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, tertiary-container) !important;
+    }
+}
+
+.bg-error-container {
+    background-color: mat.get-theme-color($ddr-light-theme, error-container) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, error-container) !important;
+    }
+}
+
+.bg-surface-container-lowest {
+    background-color: mat.get-theme-color($ddr-light-theme, surface-container-lowest) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, surface-container-lowest) !important;
+    }
+}
+
+.bg-surface-container-low {
+    background-color: mat.get-theme-color($ddr-light-theme, surface-container-low) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, surface-container-low) !important;
+    }
+}
+
+.bg-surface-container {
+    background-color: mat.get-theme-color($ddr-light-theme, surface-container) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, surface-container) !important;
+    }
+}
+
+.bg-surface-container-high {
+    background-color: mat.get-theme-color($ddr-light-theme, surface-container-high) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, surface-container-high) !important;
+    }
+}
+
+.bg-surface-container-highest {
+    background-color: mat.get-theme-color($ddr-light-theme, surface-container-highest) !important;
+    @media (prefers-color-scheme: dark) {
+        background-color: mat.get-theme-color($ddr-dark-theme, surface-container-highest) !important;
+    }
+}
+
