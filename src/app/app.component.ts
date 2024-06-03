@@ -9,6 +9,7 @@ import {ToolbarService} from "./toolbar/toolbar.service";
 import {Observable} from "rxjs";
 import {AsyncPipe} from "@angular/common";
 import {DdrMaterialExtensionsModule} from "@dontdrinkandroot/ngx-material-extensions";
+import {SwUpdate} from "@angular/service-worker";
 
 @Component({
     selector: 'ddr-root',
@@ -33,7 +34,17 @@ export class AppComponent implements OnInit {
 
     constructor(
         private readonly toolbarService: ToolbarService,
+        swUpdate: SwUpdate,
     ) {
+        if (swUpdate.isEnabled) {
+            swUpdate.versionUpdates.subscribe((event) => {
+                switch (event.type) {
+                    case 'VERSION_READY':
+                        document.location.reload();
+                        break;
+                }
+            });
+        }
     }
 
     /**
