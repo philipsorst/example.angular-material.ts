@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1717410101261,
+  "timestamp": 1717410247790,
   "index": "https://philipsorst.github.io/example.angular-material.ts/index.html",
   "assetGroups": [
     {
@@ -113,7 +113,7 @@
     "https://philipsorst.github.io/example.angular-material.ts/chunk-EGK4UZX7.js": "3ce40860b88fd5aecdb1e90f78829a5c36a5fb51",
     "https://philipsorst.github.io/example.angular-material.ts/chunk-G3TBALB4.js": "5ef495b61f11eac15744ff7fae40b719f64e37ca",
     "https://philipsorst.github.io/example.angular-material.ts/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "https://philipsorst.github.io/example.angular-material.ts/index.html": "eda353c3b1523e7d605a23aeed85a6da9e94a963",
+    "https://philipsorst.github.io/example.angular-material.ts/index.html": "51fc9ffb95ee49e16ee2c8ca977f8bef475871b1",
     "https://philipsorst.github.io/example.angular-material.ts/main-WQC3FCQU.js": "814e57a530592cc70929bcf36fcc190c0f07cd11",
     "https://philipsorst.github.io/example.angular-material.ts/manifest.webmanifest": "74fdd7fa7925260e504563b1dbafc618424dd3eb",
     "https://philipsorst.github.io/example.angular-material.ts/media/material-icons-latin-400-normal-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
