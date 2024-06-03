@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1717409937575,
+  "timestamp": 1717410101261,
   "index": "https://philipsorst.github.io/example.angular-material.ts/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "https://philipsorst.github.io/example.angular-material.ts/chunk-G3TBALB4.js",
         "https://philipsorst.github.io/example.angular-material.ts/favicon.ico",
         "https://philipsorst.github.io/example.angular-material.ts/index.html",
-        "https://philipsorst.github.io/example.angular-material.ts/main-QH52EAF4.js",
+        "https://philipsorst.github.io/example.angular-material.ts/main-WQC3FCQU.js",
         "https://philipsorst.github.io/example.angular-material.ts/manifest.webmanifest",
         "https://philipsorst.github.io/example.angular-material.ts/polyfills-A7MJM4D4.js",
         "https://philipsorst.github.io/example.angular-material.ts/styles-A47IL4Q6.css"
@@ -113,8 +113,8 @@
     "https://philipsorst.github.io/example.angular-material.ts/chunk-EGK4UZX7.js": "3ce40860b88fd5aecdb1e90f78829a5c36a5fb51",
     "https://philipsorst.github.io/example.angular-material.ts/chunk-G3TBALB4.js": "5ef495b61f11eac15744ff7fae40b719f64e37ca",
     "https://philipsorst.github.io/example.angular-material.ts/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "https://philipsorst.github.io/example.angular-material.ts/index.html": "156943525e23fa9df5a93f4791d130fc664209eb",
-    "https://philipsorst.github.io/example.angular-material.ts/main-QH52EAF4.js": "0a57cad4b443abb02d5b8d48155003e66214ff4c",
+    "https://philipsorst.github.io/example.angular-material.ts/index.html": "eda353c3b1523e7d605a23aeed85a6da9e94a963",
+    "https://philipsorst.github.io/example.angular-material.ts/main-WQC3FCQU.js": "814e57a530592cc70929bcf36fcc190c0f07cd11",
     "https://philipsorst.github.io/example.angular-material.ts/manifest.webmanifest": "74fdd7fa7925260e504563b1dbafc618424dd3eb",
     "https://philipsorst.github.io/example.angular-material.ts/media/material-icons-latin-400-normal-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
     "https://philipsorst.github.io/example.angular-material.ts/media/material-icons-latin-400-normal-OKHIZNFO.woff": "a00c7900fc85bb011b36e4d70d7825127c02c63c",
