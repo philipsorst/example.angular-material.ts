@@ -1,17 +1,10 @@
-<mat-sidenav-container>
-    <mat-sidenav
-        #sidenav
-        [mode]="(desktopView$|async) ? 'side' : 'over'"
-        [fixedInViewport]="true"
-        [opened]="desktopView$|async"
-    >
-        <div class="ddr-mat-fixed-toolbar-container">
-            <mat-toolbar>
-                <h1>Material Example</h1>
-            </mat-toolbar>
-        </div>
+<ddr-mat-sidenav-container>
+    <div slot="mat-sidenav">
+        <mat-toolbar [ddrMatToolbarFixedTop]="['d-max-md-none']">
+            <h1>Material Example</h1>
+        </mat-toolbar>
 
-        <mat-nav-list>
+        <mat-nav-list class="ddr-mat-sidenav-nav-list">
             <a mat-list-item
                [routerLink]="['/', 'typography']"
                [routerLinkActive]="['mdc-list-item--activated']"
@@ -19,31 +12,20 @@
                 Typography
             </a>
             <mat-divider></mat-divider>
-            <div matSubheader class="mat-title-small text-secondary">Components</div>
+            <div matSubheader class="mat-title-medium">Components</div>
             <a mat-list-item
                [routerLink]="['/', 'components', 'button']"
                [routerLinkActive]="['mdc-list-item--activated']"
             >
                 Button
             </a>
-            <a mat-list-item
-               [routerLink]="['/', 'components', 'card']"
-               [routerLinkActive]="['mdc-list-item--activated']"
-            >
-                Card
-            </a>
         </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-        <div class="ddr-mat-fixed-toolbar-container">
-            <mat-toolbar class="ddr-mat-icon-start">
-                <button mat-icon-button (click)="sidenav.toggle()" class="ddr-sidenav-toggle">
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <h1>{{ title$|async }}</h1>
-            </mat-toolbar>
-        </div>
+    </div>
+    <div slot="mat-sidenav-content">
+        <mat-toolbar ddrMatToolbarFixedTop class="ddr-mat-toolbar-icon-start-mobile">
+            <ddr-mat-sidenav-toggle></ddr-mat-sidenav-toggle>
+            <h1>{{ title$|async }}</h1>
+        </mat-toolbar>
         <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+    </div>
+</ddr-mat-sidenav-container>

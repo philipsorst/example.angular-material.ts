@@ -1,79 +1,10 @@
 @use '@angular/material' as mat;
 
-@import 'styles/_variables';
-@import 'styles/_theme';
-@import 'styles/_material_custom';
-@import 'styles/_examples';
-@import 'styles/_fonts';
+@import "@dontdrinkandroot/ngx-material-extensions/assets/style";
+@import "@dontdrinkandroot/ngx-material-extensions/assets/fonts";
 
-html, body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: "Roboto", "Helvetica Neue", sans-serif;
-}
-
-.mat-toolbar {
-    top: 0;
-    position: fixed;
-    z-index: 2;
-}
-
-body.scrolled {
-    .mat-toolbar {
-        background: mat.get-theme-color($ddr-light-theme, 'surface-container');
-        @media (prefers-color-scheme: dark) {
-            background: mat.get-theme-color($ddr-dark-theme, 'surface-container');
-        }
+#component-button {
+    button {
+        margin-right: .5rem !important;
     }
-}
-
-.mat-sidenav-container {
-
-    .mat-sidenav {
-        .ddr-mat-fixed-toolbar-container {
-            display: none;
-        }
-
-        @media (min-width: $ddr-breakpoint-md) {
-            .ddr-mat-fixed-toolbar-container {
-                display: block;
-
-                .mat-toolbar {
-                    width: 360px;
-                }
-            }
-        }
-    }
-
-    .mat-sidenav-content {
-        .mat-toolbar {
-            @media (max-width: $ddr-breakpoint-md) {
-                padding-left: .25rem; // Toggle is shown
-            }
-        }
-    }
-}
-
-button.ddr-sidenav-toggle {
-    margin-right: .25rem;
-    @media (min-width: $ddr-breakpoint-md) {
-        display: none;
-    }
-}
-
-.mx-half {
-    margin-left: 0.5rem !important;
-    margin-right: 0.5rem !important;
-}
-
-.mx-full {
-    margin-left: 1rem !important;
-    margin-right: 1rem !important;
-}
-
-.border-color-none {
-    border-color: transparent !important;
 }
