@@ -20,7 +20,7 @@ jobs:
                 run: yarn install
 
             -   name: Build the project
-                run: yarn ng build --configuration=production --base-href=https://philipsorst.github.io/example.angular-material.ts
+                run: yarn ng build --configuration=production --base-href=https://philipsorst.github.io/example.angular-material.ts/
 
             -   name: Deploy to GitHub Pages
                 uses: peaceiris/actions-gh-pages@v4
