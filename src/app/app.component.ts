@@ -13,7 +13,6 @@ import {SwUpdate} from "@angular/service-worker";
 
 @Component({
     selector: 'ddr-root',
-    standalone: true,
     imports: [
         RouterOutlet,
         MatToolbarModule,
@@ -27,7 +26,7 @@ import {SwUpdate} from "@angular/service-worker";
         DdrMaterialExtensionsModule
     ],
     templateUrl: 'app.component.html',
-    styles: [],
+    styles: []
 })
 export class AppComponent implements OnInit {
     public title$!: Observable<string>;

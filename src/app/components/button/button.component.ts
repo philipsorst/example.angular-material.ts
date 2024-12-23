@@ -4,7 +4,6 @@ import {MatCard, MatCardContent} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 
 @Component({
-    standalone: true,
     imports: [
         MatCard,
         MatCardContent,

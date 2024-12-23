@@ -3,7 +3,6 @@ import {MatCardModule} from "@angular/material/card";
 import {ToolbarService} from "../toolbar/toolbar.service";
 
 @Component({
-    standalone: true,
     templateUrl: 'typography.component.html',
     imports: [
         MatCardModule

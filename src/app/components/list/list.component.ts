@@ -6,7 +6,6 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @Component({
-    standalone: true,
     templateUrl: 'list.component.html',
     imports: [
         MatListModule,
