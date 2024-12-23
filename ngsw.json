@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1717504692541,
+  "timestamp": 1734996659157,
   "index": "https://philipsorst.github.io/example.angular-material.ts/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://philipsorst.github.io/example.angular-material.ts/chunk-LZILF3R2.js",
-        "https://philipsorst.github.io/example.angular-material.ts/chunk-YRWQJZPR.js",
+        "https://philipsorst.github.io/example.angular-material.ts/chunk-JX72ECNI.js",
+        "https://philipsorst.github.io/example.angular-material.ts/chunk-YTMQZK3B.js",
         "https://philipsorst.github.io/example.angular-material.ts/favicon.ico",
         "https://philipsorst.github.io/example.angular-material.ts/index.html",
-        "https://philipsorst.github.io/example.angular-material.ts/main-RD4362KB.js",
+        "https://philipsorst.github.io/example.angular-material.ts/main-FJECMEDP.js",
         "https://philipsorst.github.io/example.angular-material.ts/manifest.webmanifest",
-        "https://philipsorst.github.io/example.angular-material.ts/polyfills-A7MJM4D4.js",
-        "https://philipsorst.github.io/example.angular-material.ts/styles-A47IL4Q6.css"
+        "https://philipsorst.github.io/example.angular-material.ts/polyfills-SCHOHYNV.js",
+        "https://philipsorst.github.io/example.angular-material.ts/styles-D2FQP3ER.css"
       ],
       "patterns": []
     },
@@ -122,11 +122,11 @@
     "https://philipsorst.github.io/example.angular-material.ts/assets/images/avatar4.jpeg": "c0b86c360d17870541666f805b3394095949dca5",
     "https://philipsorst.github.io/example.angular-material.ts/assets/images/back1.jpeg": "dcbdaf78b060dd72bca23c22efd37750fb9f744f",
     "https://philipsorst.github.io/example.angular-material.ts/assets/images/back2.jpeg": "300316ac9972fc484f742a1073f375f58746f7b5",
-    "https://philipsorst.github.io/example.angular-material.ts/chunk-LZILF3R2.js": "758f83df2a653510b73435263e0cd262266f07f3",
-    "https://philipsorst.github.io/example.angular-material.ts/chunk-YRWQJZPR.js": "acc669aed79ea443d4c1a482ed77d2804b72a8cb",
+    "https://philipsorst.github.io/example.angular-material.ts/chunk-JX72ECNI.js": "ea9dd8055b8893710e500953ccaac9eb97d5c70c",
+    "https://philipsorst.github.io/example.angular-material.ts/chunk-YTMQZK3B.js": "c545890d831e9bbf2342e59355c09327b7087262",
     "https://philipsorst.github.io/example.angular-material.ts/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "https://philipsorst.github.io/example.angular-material.ts/index.html": "954e64b53f6e66b3e1dc3cb3d6eecad1b7178561",
-    "https://philipsorst.github.io/example.angular-material.ts/main-RD4362KB.js": "d2d0dbeb00f0b0f73f21a0900bdff5a4f2af5edb",
+    "https://philipsorst.github.io/example.angular-material.ts/index.html": "3cd6af26dd3def2c3d1b857f29f688f523ce0a6a",
+    "https://philipsorst.github.io/example.angular-material.ts/main-FJECMEDP.js": "f7a64e2918377a2aa7b8235ab10ad58de76040d6",
     "https://philipsorst.github.io/example.angular-material.ts/manifest.webmanifest": "74fdd7fa7925260e504563b1dbafc618424dd3eb",
     "https://philipsorst.github.io/example.angular-material.ts/media/material-icons-latin-400-normal-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
     "https://philipsorst.github.io/example.angular-material.ts/media/material-icons-latin-400-normal-OKHIZNFO.woff": "a00c7900fc85bb011b36e4d70d7825127c02c63c",
@@ -186,8 +186,8 @@
     "https://philipsorst.github.io/example.angular-material.ts/media/roboto-vietnamese-500-normal-P6GAKVF2.woff2": "76f4002863493c93454a9f17424942f321287cba",
     "https://philipsorst.github.io/example.angular-material.ts/media/roboto-vietnamese-700-normal-OK7YGL5Y.woff2": "9e6eae8554f8cc2309b2dae2d9fa217e34eed6a4",
     "https://philipsorst.github.io/example.angular-material.ts/media/roboto-vietnamese-700-normal-QLFGMKXO.woff": "53bb495cd062f36b3ce88a7d4f0de1b60cd12ece",
-    "https://philipsorst.github.io/example.angular-material.ts/polyfills-A7MJM4D4.js": "547053781d5952561abe68a51cc6c1a2b1b51c55",
-    "https://philipsorst.github.io/example.angular-material.ts/styles-A47IL4Q6.css": "8da30e61658cbd8c4645a5a9ae91324ac62c0cfa"
+    "https://philipsorst.github.io/example.angular-material.ts/polyfills-SCHOHYNV.js": "d45c76c5960bab3ace7fd6d211b9579456241f8a",
+    "https://philipsorst.github.io/example.angular-material.ts/styles-D2FQP3ER.css": "1c9286c1f2d2cca052bf472b77d5f22432f4dc77"
   },
   "navigationUrls": [
     {
