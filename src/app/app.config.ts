@@ -6,6 +6,8 @@ import {provideAnimationsAsync} from '@angular/platform-browser/animations/async
 import {MAT_CARD_CONFIG} from "@angular/material/card";
 import {provideServiceWorker} from '@angular/service-worker';
 
+import {provideDdrMaterialExtensions} from "@dontdrinkandroot/ngx-material-extensions";
+
 export const appConfig: ApplicationConfig = {
     providers: [
         provideRouter(routes, withInMemoryScrolling({
@@ -21,6 +23,7 @@ export const appConfig: ApplicationConfig = {
         provideServiceWorker('ngsw-worker.js', {
             enabled: !isDevMode(),
             registrationStrategy: 'registerWhenStable:30000'
-        })
+        }),
+        provideDdrMaterialExtensions()
     ]
 };

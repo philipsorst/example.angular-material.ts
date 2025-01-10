@@ -82,7 +82,8 @@
                         "development": {
                             "optimization": false,
                             "extractLicenses": false,
-                            "sourceMap": true
+                            "sourceMap": true,
+                            "preserveSymlinks": true
                         }
                     },
                     "defaultConfiguration": "production"
