@@ -1,5 +1,4 @@
-import {Component} from "@angular/core";
-import {ToolbarService} from "../../toolbar/toolbar.service";
+import {ChangeDetectionStrategy, Component} from "@angular/core";
 import {MatCard, MatCardContent} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 
@@ -9,10 +8,8 @@ import {MatButtonModule} from "@angular/material/button";
         MatCardContent,
         MatButtonModule
     ],
-    templateUrl: 'button.component.html'
+    templateUrl: 'button.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
-    constructor(private readonly toolbarService: ToolbarService) {
-        this.toolbarService.setTitle('Button');
-    }
 }

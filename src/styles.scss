@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
 
-@import "@dontdrinkandroot/ngx-material-extensions/assets/style";
-@import "@dontdrinkandroot/ngx-material-extensions/assets/fonts";
+@use "@dontdrinkandroot/ngx-material-extensions/assets/style";
+@use "@dontdrinkandroot/ngx-material-extensions/assets/fonts";
 
 #component-button {
     button {

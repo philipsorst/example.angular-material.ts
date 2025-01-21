@@ -357,10 +357,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@dontdrinkandroot/ngx-material-extensions@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@dontdrinkandroot/ngx-material-extensions/-/ngx-material-extensions-0.7.1.tgz#a9c53c8ad5b24baf58e63cd4ffec453836557f19"
-  integrity sha512-fxSn6NyfaAnBLg0DoPhhFrub0jwG8J45amspAttXlVxwkOXc87ivF7crXH7yCB5mP/Pg8EjZwLABA7sA3p46ew==
+"@dontdrinkandroot/ngx-material-extensions@^0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@dontdrinkandroot/ngx-material-extensions/-/ngx-material-extensions-0.7.3.tgz#00dd4a3053b039658b023f61df2d36f699cfbd83"
+  integrity sha512-n92R/GIM/7ne8j5W8NXPzaFOwwNkyB9vJVk8vhA3qcpwoctynjqZqrGIUkGizcxS0rjZpUrXpDrAAH2dKD3tQA==
   dependencies:
     tslib "^2.3.0"
 
@@ -599,20 +599,20 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.24.0.tgz#168ab1c7e1c318b922637fad8f339d48b01e1244"
   integrity sha512-7IAFPrjSQIJrGsK6flwg7NFmwBoSTyF3rl7If0hNUFQU4ilTsEPL6GuMuU9BfIWVVGuRnuIidkSMC+c0Otu8IA==
 
+"@faker-js/faker@^9.4.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-9.4.0.tgz#3e85604df3a318729436677565e9433d964276d2"
+  integrity sha512-85+k0AxaZSTowL0gXp8zYWDIrWclTbRPg/pm/V0dSFZ6W6D4lhcG3uuZl4zLsEKfEvs69xDbLN2cHQudwp95JA==
+
+"@fontsource-variable/roboto-flex@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/roboto-flex/-/roboto-flex-5.1.1.tgz#6cb42a852ff44bd1574491c33d79aa3c872fff3e"
+  integrity sha512-cMtqtR+EhqTcox5+Sz+/+N7C8hHheQm1EtxJ9qrr356N2lwbpEU0y5OA4as+V7cdiaEFxXw6jzO9KoqLMZ6tNg==
+
 "@fontsource/material-symbols-rounded@^5.1.4":
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/@fontsource/material-symbols-rounded/-/material-symbols-rounded-5.1.4.tgz#7e7829232cba1e2ca4e7a4469a767314a7eca5b8"
   integrity sha512-kxwe10MvWwAUncpdQa1jnhIwdyF0NqGEsGaegKmyRtjYu1Ql2CPR4xsW0qgoh4YEThw8wj6VltI8/oKeX8td/g==
-
-"@fontsource/roboto-flex@^5.0":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto-flex/-/roboto-flex-5.1.1.tgz#8beba205e987852caa27e5c94f9834bc9da3d0e0"
-  integrity sha512-w3FsAI5FF2QpFRJ+JYz35iY9IbwecnF1761FMbqyQCvmgknRW3u5+bwlWZHaDCqCx5Xl7qCkhJQZ/d7A0UhjnQ==
-
-"@fontsource/roboto@^5.0":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-5.1.1.tgz#64b3f819baf8d3bcfb48c0437ddc7e4118a6ab14"
-  integrity sha512-XwVVXtERDQIM7HPUIbyDe0FP4SRovpjF7zMI8M7pbqFp3ahLJsJTd18h+E6pkar6UbV3btbwkKjYARr5M+SQow==
 
 "@inquirer/checkbox@^4.0.2":
   version "4.0.4"
